@@ -67,22 +67,20 @@
               //PoliGNU
               twitterAPI:{color:CLR.pub, alpha:0, link:"http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social"},
             //Printed
-             "Revista iMasters - pg59":{color:CLR.pub, alpha:0, link:'http://issuu.com/imasters/experience/revista-imasters7'},
+             "Revista iMasters - pg59":{color:CLR.pub, alpha:0, link:'http://issuu.com/imasters/docs/revista-imasters7'},
              "Caderno PoliGNU - Software e Cultura Livres - Vol.1":{color:CLR.pub, alpha:0, link:'http://polignu.org/sites/polignu.org/files/administrativo/arquivos/2012021919/caderno_polignu_vol1.pdf'},
 
           //Skills
-            Python:{color:CLR.skills, alpha:0, link:'#'},
-            JavaScript:{color:CLR.skills, alpha:0, link:'#'},
-            nginx:{color:CLR.skills, alpha:0, link:'#'},
-            DataViz:{color:CLR.skills, alpha:0, link:'#'},
-            R:{color:CLR.skills, alpha:0, link:'#'},
-            CartoDB:{color:CLR.skills, alpha:0, link:'#'},
-            Mapping:{color:CLR.skills, alpha:0, link:'#'},
-            Speaking:{color:CLR.skills, alpha:0, link:'#'},
-            Teaching:{color:CLR.skills, alpha:0, link:'#'},
-            "Events Organization":{color:CLR.skills, alpha:0, link:'#'},
-            "Team Work":{color:CLR.skills, alpha:0, link:'#'}
-
+            Python:{color:CLR.skills, alpha:0, link:''},
+            JavaScript:{color:CLR.skills, alpha:0, link:''},
+            nginx:{color:CLR.skills, alpha:0, link:''},
+            DataViz:{color:CLR.skills, alpha:0, link:''},
+            R:{color:CLR.skills, alpha:0, link:''},
+            CartoDB:{color:CLR.skills, alpha:0, link:''},
+            Mapping:{color:CLR.skills, alpha:0, link:''},
+            Speaking:{color:CLR.skills, alpha:0, link:''},
+            Teaching:{color:CLR.skills, alpha:0, link:''},
+            "Team Work":{color:CLR.skills, alpha:0, link:''}
     };
 
   var Renderer = function(elt){
@@ -96,7 +94,7 @@
         nearest = null,
         _mouseP = null;
 
-    
+
     var that = {
       init:function(pSystem){
         sys = pSystem;
@@ -107,11 +105,11 @@
         that.resize();
         that._initMouseHandling();
 
-        if (document.referrer.match(/echolalia|atlas|halfviz/)){
-          // if we got here by hitting the back button in one of the demos, 
-          // start with the demos section pre-selected
-          that.switchSection('demos');
-        }
+        //if (document.referrer.match(/echolalia|atlas|halfviz/)){
+        //  // if we got here by hitting the back button in one of the demos,
+        //  // start with the demos section pre-selected
+        //  that.switchSection('demos');
+        //}
       },
       resize:function(){
         canvas.width = $(window).width();
@@ -140,7 +138,7 @@
         });
         that._drawVignette();
       },
-      
+
       _drawVignette:function(){
         var w = canvas.width;
         var h = canvas.height;
@@ -157,7 +155,7 @@
 
           _vignette = {top:top, bot:bot};
         }
-        
+
         // top
         ctx.fillStyle = _vignette.top;
         ctx.fillRect(0,0, w,r);
@@ -180,7 +178,7 @@
           if (sys) sys.start();
         }
       },
-      
+
       switchSection:function(newSection){
         var parent = sys.getEdgesFrom(newSection)[0].source;
         if (parent.data.alpha==0) return;
@@ -198,7 +196,6 @@
             if (parent != node) _get_parent_tree(parent);
           }
         }
-
         _get_parent_tree(parent);
 
         sys.eachNode(function(node){
@@ -216,8 +213,8 @@
           }
         })
       },
-      
-      
+
+
       _initMouseHandling:function(){
         // no-nonsense drag and drop (thanks springy.js)
         selected = null;
@@ -237,7 +234,7 @@
 
             if (nearest.node.data.shape!='dot'){
               selected = (nearest.distance < 50) ? nearest : null;
-              if (selected){
+              if (selected && selected.node.data.link!=''){
                  dom.addClass('linkable');
                  window.status = selected.node.data.link.replace(/^\//,"http://"+window.location.host+"/").replace(/^#/,'');
               }
@@ -253,25 +250,28 @@
               dom.removeClass('linkable');
               window.status = '';
             }
-            
+
             return false;
           },50),
           clicked:function(e){
             var pos = $(canvas).offset();
             _mouseP = arbor.Point(e.pageX-pos.left, e.pageY-pos.top);
             nearest = dragged = sys.nearest(_mouseP);
-            
-            if (nearest && selected && nearest.node===selected.node){
+
+            if (nearest && selected && nearest.node===selected.node && selected.node.data.link!=''){
               var link = selected.node.data.link;
               if (link.match(/^#/)){
                  $(that).trigger({type:"navigate", path:link.substr(1)});
               }else{
-                 window.location = link;
+                    $(".openlink").attr('href',link);
+                    $("#openHelper").css({'background': selected.node.data.color});
+                    $("#openHelper").css({'top': e.pageY-pos.top, 'left': e.pageX-pos.left});
+                    $("#openHelper").show();
               }
               return false;
             }
-            
-            
+
+
             if (dragged && dragged.node !== null) dragged.node.fixed = true;
 
             $(canvas).unbind('mousemove', handler.moved);
@@ -314,22 +314,22 @@
 
       }
     };
-    
+
     return that;
   };
-  
-  
+
+
   var Nav = function(elt){
     var dom = $(elt);
 
     var _path = null;
-    
+
     var that = {
       init:function(){
         $(window).bind('popstate',that.navigate);
         dom.find('> a').click(that.back);
         $('.more').one('click',that.more);
-        
+
         $('#experience dl:not(.datastructure) dt').click(that.reveal);
         that.update();
         return that;
@@ -337,7 +337,7 @@
       more:function(e){
         $(this).removeAttr('href').addClass('less').html('&nbsp;').siblings().fadeIn();
         $(this).next('h2').find('a').one('click', that.less);
-        
+
         return false;
       },
       less:function(e){
@@ -347,7 +347,7 @@
           $(more).text('creation & use').removeClass('less').attr('href','#');
         });
         $(this).closest('h2').prev('a').one('click',that.more);
-        
+
         return false;
       },
       reveal:function(e){
@@ -416,12 +416,12 @@
           document.title = "Diego Rabatone Oliveira CV » " + _path;
           break;
         }
-        
+
       }
     };
     return that;
   };
-  
+
   $(document).ready(function(){
 
 
@@ -446,7 +446,6 @@
           Mapping:{},
           Speaking:{},
           Teaching:{},
-          "Events Organization":{},
           "Team Work":{}
         },
         Speaches:{
@@ -491,13 +490,37 @@
     sys.parameters({stiffness:900, repulsion:1000, gravity:true, dt:0.015});
     sys.renderer = Renderer("#sitemap");
     sys.graft(theUI);
-    
+
     var nav = Nav("#nav");
     $(sys.renderer).bind('navigate', nav.navigate);
     $(nav).bind('mode', sys.renderer.switchMode);
     nav.init();
   })
 })(this.jQuery);
+
+function mouseX(evt) {
+    if (evt.pageX) {
+        return evt.pageX;
+    } else if (evt.clientX) {
+       return evt.clientX + (document.documentElement.scrollLeft ?
+           document.documentElement.scrollLeft :
+           document.body.scrollLeft);
+    } else {
+        return null;
+    }
+}
+
+function mouseY(evt) {
+    if (evt.pageY) {
+        return evt.pageY;
+    } else if (evt.clientY) {
+       return evt.clientY + (document.documentElement.scrollTop ?
+       document.documentElement.scrollTop :
+       document.body.scrollTop);
+    } else {
+        return null;
+    }
+}
 
 function gen_url_link_list(container,list){
   var _list = $(container);
@@ -539,3 +562,4 @@ function gen_url_link_list(container,list){
     _list.append(_li);
   });
 }
+
