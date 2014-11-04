@@ -17,7 +17,8 @@
       experience:"#922E00",
       demo:"#a7af00",
       pub:"#779bdb",
-      speaches: "#ffd800"
+      speaches: "#ffd800",
+      skills: "#2d8386"
     };
 
     var parentNodes = {
@@ -30,6 +31,7 @@
       Speaches:{color:CLR.branch, shape:"dot", alpha:1, show:1},
       Coding:{color:CLR.branch, shape:"dot", alpha:1, show:1},
       Publications:{color:CLR.branch, shape: "dot", alpha:1, show:1},
+      Skills:{color:CLR.branch, shape: "dot", alpha:1, show:1},
 
       //Third level
       online:{color:CLR.pub, shape:"dot", alpha:0, show:0},
@@ -50,21 +52,37 @@
              "II Brazilian National Conference on Open Data":{color:CLR.speaches, alpha:0, link:'http://www.w3.org/Consortium/Offices/blog/2014/04/08/ii-brazilian-national-conference-on-open-data/'},
 
           // Experience
-             reference:{color:CLR.experience, alpha:0, link:'#reference'},
-             introduction:{color:CLR.experience, alpha:0, link:'#introduction'},
-             "O Estado de S.Paulo":{color:CLR.experience, alpha:0, link:'#estadao'},
-             PoliGNU:{color:CLR.experience, alpha:0, link:'#polignu'},
+             //reference:{color:CLR.experience, alpha:0, link:'#reference'},
+             "Other Jobs":{color:CLR.experience, alpha:0, link:'#experience-other-jobs'},
+             "Other Experiencess":{color:CLR.experience, alpha:0, link:'#experience-other-experiences'},
+             "O Estado de S.Paulo":{color:CLR.experience, alpha:0, link:'#experience-estadao'},
+             PoliGNU:{color:CLR.experience, alpha:0, link:'#experience-polignu'},
 
           //Code
              github:{color:CLR.coding, alpha:0, link:'https://github.com/diraol'},
 
           //Publications
             //Online
+             "diraol.polignu.org":{color:CLR.pub, alpha:0, link:"http://diraol.polignu.org"},
               //PoliGNU
               twitterAPI:{color:CLR.pub, alpha:0, link:"http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social"},
             //Printed
              "Revista iMasters - pg59":{color:CLR.pub, alpha:0, link:'http://issuu.com/imasters/experience/revista-imasters7'},
-             "Caderno PoliGNU - Software e Cultura Livres - Vol.1":{color:CLR.pub, alpha:0, link:'http://polignu.org/sites/polignu.org/files/administrativo/arquivos/2012021919/caderno_polignu_vol1.pdf'}
+             "Caderno PoliGNU - Software e Cultura Livres - Vol.1":{color:CLR.pub, alpha:0, link:'http://polignu.org/sites/polignu.org/files/administrativo/arquivos/2012021919/caderno_polignu_vol1.pdf'},
+
+          //Skills
+            Python:{color:CLR.skills, alpha:0, link:'#'},
+            JavaScript:{color:CLR.skills, alpha:0, link:'#'},
+            nginx:{color:CLR.skills, alpha:0, link:'#'},
+            DataViz:{color:CLR.skills, alpha:0, link:'#'},
+            R:{color:CLR.skills, alpha:0, link:'#'},
+            CartoDB:{color:CLR.skills, alpha:0, link:'#'},
+            Mapping:{color:CLR.skills, alpha:0, link:'#'},
+            Speaking:{color:CLR.skills, alpha:0, link:'#'},
+            Teaching:{color:CLR.skills, alpha:0, link:'#'},
+            "Events Organization":{color:CLR.skills, alpha:0, link:'#'},
+            "Team Work":{color:CLR.skills, alpha:0, link:'#'}
+
     };
 
   var Renderer = function(elt){
@@ -381,10 +399,13 @@
           });
           document.title = "Diego Rabatone Oliveira CV » ";
           break;
-          
-          case 'introduction':
-          case 'estadao':
-          case 'polignu':
+
+          case 'experience-other-experiences':
+          case 'experience-other-jobs':
+          case 'experience-estadao':
+          case 'experience-polignu':
+          case 'education-formal':
+          case 'education-complementary':
           case 'reference':
           $(that).trigger({type:'mode', mode:'hidden', dt:dt});
           dom.find('> p').text(_path);
@@ -412,7 +433,21 @@
           Experience:{length:.5},
           Coding:{length:.5},
           Publications:{length:.5},
-          Speaches:{length:.5}
+          Speaches:{length:.5},
+          Skills:{}
+        },
+        Skills:{
+          Python:{},
+          JavaScript:{},
+          nginx:{},
+          DataViz:{},
+          R:{},
+          CartoDB:{},
+          Mapping:{},
+          Speaking:{},
+          Teaching:{},
+          "Events Organization":{},
+          "Team Work":{}
         },
         Speaches:{
           "www2013 Conference":{},
@@ -423,8 +458,10 @@
                Formal:{},
                Complementary:{}
         },
-        Experience:{reference:{},
-              introduction:{},
+        Experience:{
+          //reference:{},
+              "Other Experiencess":{},
+              "Other Jobs":{},
               "O Estado de S.Paulo":{},
               PoliGNU:{}
         },
@@ -436,14 +473,15 @@
           printed:{length:.6}
         },
         online:{
-          polignu:{length:.6}
+          polignu:{length:.6},
+          "diraol.polignu.org":{length:.6}
         },
         printed:{
           "Revista iMasters - pg59":{},
           "Caderno PoliGNU - Software e Cultura Livres - Vol.1":{}
         },
         polignu:{
-          twitterAPI:{length:.6}
+          twitterAPI:{length:.6},
         }
       }
     };
@@ -464,13 +502,21 @@
 function gen_url_link_list(container,list){
   var _list = $(container);
   $.each(list,function(idx,item){
-    var _li = $('<li/>');
-    if (item['image']) {
-      $('<img/>',{
+    var _li = null;
+    if (item['img']) {
+      _li = $('<li/>',{
+          class: 'with_image'
+      });
+      var img = item['img'];
+      var _img = $('<img/>',{
         alt: item['title'],
         title: item['title'],
-        src: item['image']
-      }).appendTo(_li);
+        src: img['src'],
+        class: img['class']
+      });
+      _li.append(_img);
+    } else {
+      _li = $('<li/>');
     }
     var _apt = $('<a/>',{
       href: item['link'],

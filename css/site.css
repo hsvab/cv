@@ -210,8 +210,9 @@ img {
   text-indent:0;
 }
 
-#experience h2:first-child+p{
-  margin-top:0;
+#experience h2+p
+#experience h2+h3{
+  margin-top:10px;
 }
 
 #experience .figure + p,
@@ -219,13 +220,27 @@ img {
 #experience h3+p{
   text-indent:0;
 }
-
+#experience h2 {
+  margin-top: 10px;
+}
 
 #experience b{
   text-transform:uppercase;
   font-size:80%;
 }
 
+img.estadao_proj {
+  float:left;
+  position:relative;
+  margin-top:3px;
+  margin-right:5px;
+  margin-bottom:5px;
+  max-height: 30px;
+}
+
+ul li.with_image {
+  line-height: 40px;
+}
 
 #experience .figure{
   position:absolute;
@@ -403,5 +418,6 @@ font-size:9px;
 }
 
 .gtranslated {
+  clear: both;
   font-size: 10px;
 }
