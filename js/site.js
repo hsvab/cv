@@ -263,10 +263,17 @@
               if (link.match(/^#/)){
                  $(that).trigger({type:"navigate", path:link.substr(1)});
               }else{
-                    $(".openlink").attr('href',link);
-                    $("#openHelper").css({'background': selected.node.data.color});
-                    $("#openHelper").css({'top': e.pageY-pos.top, 'left': e.pageX-pos.left});
-                    $("#openHelper").show();
+                    if (link.match(/github\.com/)){
+                        $(".openlink").attr('href',link);
+                        $("#openHelper").css({'background': selected.node.data.color});
+                        $("#openHelper").css({'top': e.pageY-pos.top, 'left': e.pageX-pos.left});
+                        $("#openHelper").show();
+                    } else {
+                        $(".frameLoader").show();
+                        $("#outframe").attr('src',"");//clear content
+                        $("#outframe").attr('src',link);
+                        $("#outsideContent").fadeIn(800);
+                    }
               }
               return false;
             }
@@ -563,3 +570,15 @@ function gen_url_link_list(container,list){
   });
 }
 
+function onIframeLoad(){
+    $(".frameLoader").hide();
+};
+
+function closeOutsideFrame(){
+    $('#outsideContent').fadeOut(500,function(){
+        $("#outframe").attr("src","");
+        $(".frameLoader").show();
+    });
+}
+
+$("#outframe").load(onIframeLoad);

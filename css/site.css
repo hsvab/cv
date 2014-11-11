@@ -10,46 +10,51 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	outline: 0;
-	font-size: 100%;
-	vertical-align: baseline;
-	background: transparent;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
 }
+
+html, body, #arbor {
+  height: 100%;
+}
+
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 
 /* remember to define focus styles! */
 :focus {
-	outline: 0;
+  outline: 0;
 }
 
 /* remember to highlight inserts somehow! */
 ins {
-	text-decoration: none;
+  text-decoration: none;
 }
 del {
-	text-decoration: line-through;
+  text-decoration: line-through;
 }
 
 /* tables still need 'cellspacing="0"' in the markup */
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* end css reset */
@@ -454,8 +459,9 @@ font-size:9px;
 
 span.boxclose{
     float:right;
-    margin-top:-4px;
-    margin-right:-4px;
+    position: absolute;
+    top:5%;
+    right:5%;
     cursor:pointer;
     color: #fff;
     border: 1px solid #AEAEAE;
@@ -470,5 +476,99 @@ span.boxclose{
 
 .boxclose:before {
     content: "×";
+}
+
+#outsideContent {
+  display: none;
+  height: 94%;
+  width: 94%;
+  background: rgba(0,0,0,0.8);
+  /*-webkit-box-shadow: 0px 0px 15px 0px rgba(50, 50, 50, 0.75);*/
+  /*-moz-box-shadow:    0px 0px 15px 0px rgba(50, 50, 50, 0.75);*/
+  /*box-shadow:         0px 0px 15px 0px rgba(50, 50, 50, 0.75);*/
+  position: absolute;
+  top:0;
+  left:0;
+  z-index:1500;
+  padding: 3%;
+  /*-webkit-border-radius: 10px;*/
+  /*-moz-border-radius: 10px;*/
+  /*border-radius: 10px;*/
+}
+
+#outframe {
+  overflow-y='scroll' 
+  overflow-x='hidden'
+  height: 90%;
+  width: 90%;
+  padding-left: 5%;
+  z-index:1610;
+}
+
+.frameLoader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index:1600;
+}
+
+.centerBike{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 26px;
+  margin-left: -12px;
+}
+
+.center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -50px;
+  margin-left: -50px;
+}
+
+#loop{
+  height: 100px;
+  width: 100px;
+  border: #bb5f27 solid 4px;
+  border-radius: 200px;
+}
+
+#loop:before {
+    background: -moz-linear-gradient(left, rgba(187,95,39,0) 0%, rgba(187,95,39,1) 30%, rgba(187,95,39,1) 70%, rgba(187,95,39,0) 100%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(187,95,39,0)), color-stop(30%,rgba(187,95,39,1)), color-stop(70%,rgba(187,95,39,1)), color-stop(100%,rgba(187,95,39,0)));
+    background: -webkit-linear-gradient(left, rgba(187,95,39,0) 0%,rgba(187,95,39,1) 30%,rgba(187,95,39,1) 70%,rgba(187,95,39,0) 100%);
+    background: -o-linear-gradient(left, rgba(187,95,39,0) 0%,rgba(187,95,39,1) 30%,rgba(187,95,39,1) 70%,rgba(187,95,39,0) 100%);
+    background: -ms-linear-gradient(left, rgba(187,95,39,0) 0%,rgba(187,95,39,1) 30%,rgba(187,95,39,1) 70%,rgba(187,95,39,0) 100%);
+    background: linear-gradient(to right, rgba(187,95,39,0) 0%,rgba(187,95,39,1) 30%,rgba(187,95,39,1) 70%,rgba(187,95,39,0) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00bb5f27', endColorstr='#00bb5f27',GradientType=1 );
+    content: "";
+    display: block;
+    height: 4px;
+    left: -100px;
+    position: relative;
+    top: 100px;
+    width: 300px;
+}
+
+#bike-wrapper{
+  height: 108px;
+  width: 108px;
+  animation: drive 3s linear infinite;
+}
+
+#bike{
+  height: 24px;
+  width: 25px;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/133687/motorbike.png");
+}
+
+@keyframes drive
+{ 
+  0% {margin-left: -364px;opacity:0;}
+  33.33%  {transform: rotate(0deg);margin-left: -50px;opacity:1;}
+  66.66%  {transform: rotate(-360deg);margin-left: -50px;opacity:1;}
+  100%  {margin-left: 264px;transform: rotate(-360deg);opacity:0;}
 }
 
