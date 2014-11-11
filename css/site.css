@@ -113,7 +113,7 @@ body{
   color:#333;
   background:white;
   position:absolute;
-  bottom:10px;
+  /*bottom:10px;*/
   /*left:160px;*/
   text-align: center;
   width: 100%;
@@ -238,24 +238,63 @@ img {
   font-size:80%;
 }
 
+.imgspan {
+  display:inline-block;
+  float:left;
+  position:relative;
+}
+
+.listcontentspan {
+  display:inline-block;
+  line-height: 15px;
+  float:left;
+  position:relative;
+  max-width: 740px;
+  margin-bottom: 10px;
+}
+
 img.estadao_proj {
   float:left;
   position:relative;
-  margin-top:3px;
+  margin-top:0px;
   margin-right:5px;
   margin-bottom:5px;
   max-height: 30px;
+  line-height:20px;
+  border: 1px solid #999;
 }
 
 ul li.with_image {
-  line-height: 40px;
+  line-height: 45px;
 }
 
-ul li {}
+.proj_desc {
+  display: block;
+  font-size: 10px;
+  line-height: 10px;
+}
+
+#experience ul li {
+  clear:both;
+  margin-top: 5px;
+}
+
+#experience ul li:first-child {
+  margin-top: 0px;
+}
 
 #experience .figure{
   position:absolute;
   left:440px;
+}
+
+a {
+  color: #484863;/*#00006F;*/
+  text-decoration: none;
+}
+a:visited {
+  color: #484863;/*#00006F;*/
+  text-decoration: underline;
 }
 
 dl{
@@ -431,6 +470,7 @@ font-size:9px;
 .gtranslated {
   clear: both;
   font-size: 10px;
+  font-weight: normal;
 }
 .openhelper {
   display: none;
@@ -505,6 +545,8 @@ span.boxclose{
   z-index:1610;
 }
 
+/* LOADING */
+/* LOADING */
 .frameLoader {
   position: absolute;
   left: 50%;
@@ -571,4 +613,6 @@ span.boxclose{
   66.66%  {transform: rotate(-360deg);margin-left: -50px;opacity:1;}
   100%  {margin-left: 264px;transform: rotate(-360deg);opacity:0;}
 }
+/* LOADING */
+/* LOADING */
 

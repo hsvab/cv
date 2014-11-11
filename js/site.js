@@ -533,10 +533,12 @@ function gen_url_link_list(container,list){
   var _list = $(container);
   $.each(list,function(idx,item){
     var _li = null;
+    var _text = $('<span/>',{class:'listcontentspan'});
     if (item['img']) {
       _li = $('<li/>',{
           class: 'with_image'
       });
+      var _imgspan = $("<span/>",{class: 'imgspan'});
       var img = item['img'];
       var _img = $('<img/>',{
         alt: item['title'],
@@ -544,7 +546,8 @@ function gen_url_link_list(container,list){
         src: img['src'],
         class: img['class']
       });
-      _li.append(_img);
+      _imgspan.append(_img);
+      _li.append(_imgspan);
     } else {
       _li = $('<li/>');
     }
@@ -563,9 +566,15 @@ function gen_url_link_list(container,list){
       //alt: item['title'], // How to get it translated? #TODO
       text: "(Google Translated)"
     }).appendTo(_small);
-    _li.append(_apt);
-    _li.append(" - ");
-    _li.append(_small);
+    var _desc = $("<span/>",{
+    class: 'proj_desc',
+    text: item['desc']
+    });
+    _text.append(_apt);
+    _text.append(" - ");
+    _text.append(_small);
+    _text.append(_desc);
+    _li.append(_text);
     _list.append(_li);
   });
 }
