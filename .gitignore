@@ -1,1 +1,7 @@
-.idea*.aux*.bcf*.log*.out*.run.xml*.synctex.gz
+.idea
+*.aux
+*.bcf
+*.log
+*.out
+*.run.xml
+*.synctex.gz
