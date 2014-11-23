@@ -4,6 +4,15 @@
 \usepackage{hyperref}
 \usepackage{color}
 \usepackage{xcolor}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\rfoot{{\footnotesize {See the last version of this document at: \href{https://github.com/diraol/cv/blob/tex-pdf-version/cv.pdf}{https://github.com/diraol/cv/blob/tex-pdf-version/cv.pdf}}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
 \hypersetup{
     pdftitle={Diego Rabatone Oliveira Resume},
     pdfauthor={Diego Rabatone Oliveira},
@@ -17,6 +26,8 @@
 \definecolor{pblue}{HTML}{0395DE}
 
 \begin{document}
+\thispagestyle{empty}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
 \header{Diego}{Rabatone O.}
       {Computer Engineer}
       
@@ -40,6 +51,9 @@
   \section{IRC}
     \#diraol (at) irc.freenode.net
     ~
+  \section{Twitter}
+    \href{http://twitter.com/diraol}{@diraol}
+    ~
   \section{Web \& Git}
     \href{http://cv.diraol.eng.br}{cv.diraol.eng.br}
     \href{https://github.com/diraol}{github.com/diraol}
@@ -49,6 +63,7 @@
     JavaScript
     CSS
     ShellScript
+    R
     \LaTeX
     \href{http://ghv.artzub.com/\#user=diraol}{ghv.artzub.com/}
     \href{http://ghv.artzub.com/\#user=diraol}{\#user=diraol}
@@ -61,7 +76,13 @@
   \section{Other Techs}
     Nginx
     Varnish
-    Xen  
+    Xen
+    MySQL
+    Postgres
+    CartoDB
+    QuantumGis
+    Inkscape
+    Gimp
 \end{aside}
 
 \section{Experience}
@@ -72,10 +93,10 @@
     {O Estado de S.Paulo S/A}
     {Main developer of the data driven journalism team ("\href{http://estadaodados.com}{Estadão Dados}").\\
      Responsabilities:\\
-     DATAVIZ - From concept creation to full deploy, usually web interactive\\
-     DATA ANALYSIS - Analysis of public databases of any area of knowledge\\
-     DATA SCRAPING - Gathering public data mostly with python crawlers\\
-     DATA TREATMENT - Cleaning and structuring databases to be analysed\\
+     DataViz - From concept creation to full deploy, usually web interactive\\
+     Data Analysis - Analysis of public databases of any area of knowledge\\
+     Data Scraping - Gathering public data mostly with python crawlers\\
+     Data Treatment - Cleaning and structuring databases to be analysed\\
      \href{http://estadaodados.com}{http://estadaodados.com}\\}
   \entry
     {10/09 - now}
@@ -83,7 +104,7 @@
     {\href{http://polignu.org}{PoliGNU}}
     {PoliGNU - Poli-USP Free Software Studies Group\\
     Organization and planning of activities and discussion groups\\
-     Infrastructure management (sysadmin, website)\\
+     Infrastructure management (SysAdmin, website)\\
      Disclosure and presentation at conferences, seminars, workshops, etc\\
      \href{http://polignu.org}{http://polignu.org}}
    \entry
@@ -145,7 +166,7 @@
 %\end{entrylist}
 
 \newpage
-
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
 \begin{aside}
 ~
 ~
@@ -188,7 +209,7 @@
 \end{aside}
 
 \section{Publications}
-\textbf{Twitter API, ElasticSearch and Kibana - Analysing the social network}\\
+\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}\\
 \emph{Tutorial on how to gather, process and analyse twitter traffic}\\
 \href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}
 
@@ -204,10 +225,10 @@
 \textbf{The Parliamentary Radar} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
 It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
 This project has been received 4 awards since 2012.\\
-\textbf{Technologies:} Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js\\
+Technologies: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
 
 \textbf{Transparência Hacker (\textit{Hacker Transparency})}\\
-Member of brazilian Hacker Transparency community, that advocates for Open Government, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a HackerLab at the Congress, influenced the brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.\\
+Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a HackerLab at the Congress, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.\\
 HackLab at Congress: \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}
 \section{Events}
 07/14 - \href{http://abraji.org.br/congresso/}{\textbf{9$^{th}$ Internation Investigative Journalism Congress}}\\
@@ -234,15 +255,15 @@ Mentor on the first edition of "Rodada Hacker", a one day workshop that aims to 
 05/10 - \href{http://artigo19.org/infoedireitoseu/?p=560}{\textbf{The Right to Information Access}}\\
 Speaker about the Right to Information Access at PUC Univeristy
 %
-%~\\
+%\\
 %
 %\begin{flushleft}
 %\emph{November 22th, 2014}
 %\end{flushleft}
 %\begin{flushright}
-%\emph{Diego Rabatone Oliveira}
+%
 %\end{flushright}
-
+%
 %%% This piece of code has been commented by Karol Kozioł due to biblatex errors. 
 % 
 %\printbibsection{article}{article in peer-reviewed journal}
