@@ -5,13 +5,22 @@
 \defaultfontfeatures{Ligatures=TeX}
 \usepackage{afterpage}
 \usepackage{hyperref}
+\usepackage{hyphenat}
 \usepackage{color}
 \usepackage{xcolor}
 \usepackage{fancyhdr}
 \usepackage{multilanguage}
 
-\setdoclang{br}{brazil}
-%\setdoclang{en}{english}
+%\setdoclang{br}{brazil}
+\setdoclang{en}{english}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black},
+    pdfborder={0 0 0},
+}
 
 \pagestyle{fancy}
 \lhead{}
@@ -40,15 +49,24 @@
     colorlinks=false,       % no lik border color
    allbordercolors=white    % white border color for all
 }
-\addbibresource{bibliography.bib}
+%\addbibresource{bibliography.bib}
 \RequirePackage{xcolor}
 \definecolor{pblue}{HTML}{0395DE}
 
 \begin{document}
 \thispagestyle{empty}
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
-\header{Diego}{Rabatone O.}
-      {Computer Engineer}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\langif{br}{%
+%% text for lang pt-br
+%
+%}{%
+%% text for lang pt-br
+%
+%}
+%\langif{br}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\header{Diego}{Rabatone O.}{\langif{br}{Engenheiro de Computação}{Computer Engineer}}
 
 % Fake text to add separator
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
@@ -57,13 +75,13 @@
 
 % In the aside, each new line forces a line break
 \begin{aside}
-  \section{Address}
-    São Paulo, SP, Brazil
+  \section{\langif{br}{Endereço}{Address}}
+    São Paulo, SP, \langif{br}{Brasil}{Brazil}
     ~
-  \section{Tel}
+  \section{\langif{br}{Telefone}{Tel}}
     +55 11 9-8231-4249
     ~
-  \section{Mail}
+  \section{\langif{br}{e-mail}{Mail}}
     \href{mailto:diraol@diraol.eng.br}{\textbf{diraol@}\\diraol.eng.br}
     \href{mailto:diraol@usp.br}{\textbf{diraol@}\\usp.br}
     ~
@@ -80,98 +98,104 @@
     \href{http://cv.diraol.eng.br}{cv.diraol.eng.br}
     \href{https://github.com/diraol}{github.com/diraol}
     ~
-  \section{Programming}
+  \section{\langif{br}{Programação}{Programming}}
     Python
     JavaScript
     CSS
     ShellScript
     R
-    \LaTeX
+    Latex
     \href{http://ghv.artzub.com/\#user=diraol}{ghv.artzub.com/}
     \href{http://ghv.artzub.com/\#user=diraol}{\#user=diraol}
     ~
-  \section{Daily OS}
-    Debian GNU/Linux\\%\includegraphics[scale=0.40]{img/5stars.png}
-    Gnome3\\%\includegraphics[scale=0.40]{img/2stars.png}
+  \section{\langif{br}{Ambiente diário}{Daily Env}}
+    Debian GNU/Linux \\%\includegraphics[scale=0.40]{img/5stars.png}
+    Gnome3 \\%\includegraphics[scale=0.40]{img/2stars.png}
     Vim
-    ~
-  \section{Other Techs}
-    Nginx
-    Varnish
-    Xen
-    MySQL
-    Postgres
-    CartoDB
-    QuantumGis
-    Inkscape
-    Gimp
 \end{aside}
 
-\section{Experience}
+\sectionlang{br}{Experiência}
+\sectionlang{en}{Experience}
 \begin{entrylist}
   \entry
-    {07/12 - Now}
-    {Digital Media Analist}
+    {\langif{br}{07/12 - Hoje}{07/12 - Now}}
+    {\langif{br}{Analista de Mídias Digitais}{Digital Media Analist}}
     {O Estado de S.Paulo S/A}
-    {Main developer of the data driven journalism team ("\href{http://estadaodados.com}{Estadão Dados}").\\
-     Responsabilities:\\
-     DataViz - From concept creation to full deploy, usually web interactive\\
-     Data Analysis - Analysis of public databases of any area of knowledge\\
-     Data Scraping - Gathering public data mostly with python crawlers\\
-     Data Treatment - Cleaning and structuring databases to be analysed\\
+    {\langif{br}%
+        {Desenvolvedor na equipe de jornalismo de dados}%
+        {Main developer of the data driven journalism team}
+        ("\href{http://estadaodados.com}{Estadão Dados}")\\
+     DataViz - %
+         \langif{br}%
+         {Da criação à implementação}%
+         {From concept creation to full deploy, usually web interactive}\\
+     Data Analysis - \langif{br}%
+         {Análises de bases de dados públicos}%
+         {Analysis of public databases of any area of knowledge}\\
+     Data Scraping - \langif{br}%
+         {Coleta de dados públicos (scripts Shell e Python)}%
+         {Gathering public data mostly with python crawlers}\\
+     Data Treatment - \langif{br}%
+         {Limpeza e estruturação de bases de dados}%
+         {Cleaning and structuring databases to be analysed}\\
      \href{http://estadaodados.com}{http://estadaodados.com}\\}
   \entry
-    {10/09 - now}
-    {Co-Founder, coordinator and member}
+    {\langif{br}{10/09 - Hoje}{10/09 - now}}
+    {\langif{br}{Co-fundador, coordenador e membro}{Co-Founder, coordinator and member}}
     {\href{http://polignu.org}{PoliGNU}}
-    {PoliGNU - Poli-USP Free Software Studies Group\\
-    Organization and planning of activities and discussion groups\\
-     Infrastructure management (SysAdmin, website)\\
-     Disclosure and presentation at conferences, seminars, workshops, etc\\
-     \href{http://polignu.org}{http://polignu.org}}
+    {\langif{br}{PoliGNU - Grupo de Estudos de Software Livre da Poli-USP}{PoliGNU - Poli-USP Free Software Studies Group}\\
+    \langif{br}{Organização e planejamento de atividades e grupos de discussão}{Organization and planning of activities and discussion groups}\\
+     \langif{br}{Gestão de Infraestrutura (SysAdmin e website)}{Infrastructure management (SysAdmin, website)}\\
+     \langif{br}{Divulgação e apresentações em conferências, seminários, workshops, etc}{Disclosure and presentation at conferences, seminars, workshops, etc}\\
+     \href{http://polignu.org}{http://polignu.org}\\}
    \entry
     {07/08 - 12/13}
-    {Volunteer SysAdmin}
+    {\langif{br}{Administrador de Sistemas voluntário}{Volunteer SysAdmin}}
     {Escritório Piloto - Poli-USP}
-    {Design and Setup of LAN, with OpenLDAP server, File Sharing (NFS), WebServer, Virtualization (XEN) and local DNS Server\\
+    {\langif{br}%
+        {Implementação e manutenção de rede local com servidor OpenLDAP, \nohyphens{compartilhamento} de arquivos (NFS), servidor web (apache), virtualização (XEN) e DNS local\\
+        Concepção, desenvolvimento e manutenção de website institucional (Drupal)\\}%
+        {Design and Setup of LAN, with OpenLDAP server, File Sharing (NFS), WebServer, Virtualization (XEN) and local DNS Server\\
      Design, development and management of an institucional website on Drupal\\}
+    }
    \entry
     {08/10 - 08/11}
-    {Math Teacher}
+    {\langif{br}{Professor de Matemática}{Math Teacher}}
     {ACEPUSP}
-    {Math teacher on a preparatory course to low income students\\}
+    {\langif{br}{Professor de matemática em curso preparatório para vestibular para \nohyphens{estudantes} de baixa renda}{Math teacher on a preparatory course to low income students}\\}
    \entry
     {08/10 - 12/10}
-    {Volunteer}
+    {\langif{br}{Voluntário}{Volunteer}}
     {Universidade de São Paulo}
-    {Database modeling for the new version of the Teaching Evaluation System\\}
+    {\langif{br}{Modelagem de base de dados para uma nova versão do Sistema de \nohyphens{Avaliação} de Ensino}{Database modeling for the new version of the Teaching Evaluation System}\\
+    \href{https://github.com/SuperNovaPOLIUSP}{https://github.com/SuperNovaPOLIUSP}\\}
    \entry
     {01/09 - 08/10}
-    {Volunteer}
+    {\langif{br}{Voluntário}{Volunteer}}
     {Escola de Governo}
-    {Design, development and management of institucional website on Joomla\\
-     Orientation and Mentoring of Governor Formation Course Students\\}
+    {\langif{br}{Desenvolvimento de website institucional (Joomla)}{Design, development and management of institucional website on Joomla}\\
+     \langif{br}{Orientação e mentoria de estudantes do curso de Formação de Governantes}{Orientation and Mentoring of Governor Formation Course Students}\\}
    \entry
     {03/05 - 06/06}
-    {Fellow}
+    {\langif{br}{Bolsista}{Fellow}}
     {Universidade de São Paulo}
-    {Developer of the first Digital Teaching Evaluation System}
+    {\langif{br}{Desenvolvedor do primeiro Sistema de Avaliação de Ensino da Escola \nohyphens{Politécnica}}{Developer of the first Digital Teaching Evaluation System}}
 \end{entrylist}
 
 \section{Education}
 \begin{entrylist}
   \entry
     {2005 - 2014}
-    {Undergraduate in Computer and Digital Systems Engineering\\}
+    {\langif{br}{Graduação em Engenharia Elétrica - Ênfase Computação}{Undergraduate in Computer and Digital Systems Engineering}\\}
     {Universidade de São Paulo, Brazil}
-    {Concluded in 2014\\
+    {\langif{br}{Concluída em 2014}{Concluded in 2014}\\
     %Main subjects: Matematics and Physics, Programming, Operational Research, Telecommunication Systems, Digital and Analogical Electronics.\\
     %\emph{Title of the Thesis: "Development, Management and Migrations of web contents and applications".}\\
     %\emph{Thesis activity carried out during an internship period at Atitlan Engineering SRL.}\\
     }
   \entry
     {2000 - 2002}
-    {High School}
+    {\langif{br}{Ensino Médio}{High School}}
     {Colégio Rio Branco, São Paulo, Brasil}
     {%Scientific Secondary School.\\
     %Main subjects: Matematics, Physics, Computer Science.
@@ -196,86 +220,113 @@
 %  \section{Places Lived}
 %    \includegraphics[scale=0.25]{img/italia.png}
 %    ~
-  \section{Languages}
-    \textbf{Portuguese}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{English}\includegraphics[scale=0.40]{img/5stars.png}
-    \textbf{French}\includegraphics[scale=0.40]{img/1stars.png}
-    \textbf{Spanish}\includegraphics[scale=0.40]{img/1stars.png}
-~
-  \section{Jung Typology Test - INFJ}
-    \textbf{I}ntrovert {\footnotesize (11\%)}
-    I\textbf{n}tuitive {\footnotesize (50\%)}
-    \textbf{F}eeling   {\footnotesize (12\%)}
-    \textbf{J}udging   {\footnotesize (44\%)}
-    \href{http://www.humanmetrics.com/hr/JTypesResult.aspx?EI=-11&SN=-50&TF=-12&JP=44}{\footnotesize Click for result}
-    \href{http://www.humanmetrics.com/personality/infj}{\footnotesize INFJ Desc}
-~
-  \section{Personal Skills}
-    Empathy
-    \includegraphics[scale=0.40]{img/5stars.png}
-    Integrity
-    \includegraphics[scale=0.40]{img/5stars.png}
-    Social Boldness
-    \includegraphics[scale=0.40]{img/5stars.png}
-    Team Working
-    \includegraphics[scale=0.40]{img/4stars.png}
-    Emotional Intelligence
-    \includegraphics[scale=0.40]{img/4stars.png}
-    {\footnotesize test from \href{http://www.skillsyouneed.com/ips/interpersonal-skills-test.html}{SkillsYouNeed.com}}
-    {\footnotesize Interpersonal Skills Test}
-    %\includegraphics[scale=0.62]{img/personal.png}
+  \section{\langif{br}{Outras Tecnologias}{Other Techs}}
+    Nginx
+    Varnish
+    Xen
+    MySQL
+    Postgres
+    CartoDB
+    QuantumGis
+    Inkscape
+    Gimp
     ~
+  \section{\langif{br}{Idiomas}{Languages}}
+    \textbf{\langif{br}{Português}{Portuguese}}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{\langif{br}{Inglês}{English}}\includegraphics[scale=0.40]{img/5stars.png}
+    \textbf{\langif{br}{Francês}{French}}\includegraphics[scale=0.40]{img/1stars.png}
+    \textbf{\langif{br}{Espanhol}{Spanish}}\includegraphics[scale=0.40]{img/1stars.png}
+    ~
+%  \section{Jung Typology Test - INFJ}
+%    \langif{br}{\textbf{I}ntrovertido}{\textbf{I}ntrovert} {\footnotesize (11\%)}
+%    I\textbf{n}tuitive {\footnotesize (50\%)}
+%    \textbf{F}eeling   {\footnotesize (12\%)}
+%    \textbf{J}udging   {\footnotesize (44\%)}
+%    \href{http://www.humanmetrics.com/hr/JTypesResult.aspx?EI=-11&SN=-50&TF=-12&JP=44}{\footnotesize Click for result}
+%    \href{http://www.humanmetrics.com/personality/infj}{\footnotesize INFJ Desc}
+%    ~
+%  \section{Personal Skills}
+%    Empathy
+%    \includegraphics[scale=0.40]{img/5stars.png}
+%    Integrity
+%    \includegraphics[scale=0.40]{img/5stars.png}
+%    Social Boldness
+%    \includegraphics[scale=0.40]{img/5stars.png}
+%    Team Working
+%    \includegraphics[scale=0.40]{img/4stars.png}
+%    Emotional Intelligence
+%    \includegraphics[scale=0.40]{img/4stars.png}
+%    {\footnotesize test from \href{http://www.skillsyouneed.com/ips/interpersonal-skills-test.html}{SkillsYouNeed.com}}
+%    {\footnotesize Interpersonal Skills Test}
+%    %\includegraphics[scale=0.62]{img/personal.png}
+%    ~
   \section{Hobbies}
-      \href{http://olhares.com/diraol}{Photograpy}
+      \href{http://olhares.com/diraol}{\langif{br}{Fotografia}{Photograpy}}
       Tae-Kwon-Do
 \end{aside}
 
-\section{Publications}
-\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}\\
-\emph{Tutorial on how to gather, process and analyse twitter traffic}\\
-\href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}
+\sectionlang{br}{Publicações}
+\sectionlang{en}{Publications}
+\href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}}\\
+\emph{\langif{br}{Tutorial sobre como coletar, processar e analisar dados do Twitter}{Tutorial on how to gather, process and analyse twitter traffic}}\\
 
-\textbf{DiRaOLinux}\\
-\emph{Blog to document and share daily discovers and issues fixes}\\
-\href{http://diraol.polignu.org}{http://diraol.polignu.org}
+\href{http://diraol.polignu.org}{\textbf{DiRaOLinux}}\\
+\emph{\langif{br}{Blog para documentar e compartilhar experiências diárias com software livre}{Blog to document and share daily discovers and issues fixes}}\\
 
-\textbf{Caderno do PoliGNU - Vol 1 - Software e Cultura Livres}\\
-\emph{Introductory material about Free Software and Free Culture (pt-br)}\\
-\href{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}
+\href{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}{\textbf{Caderno do PoliGNU - Vol 1 - Software e Cultura Livres}}\\
+\emph{\langif{br}{Material introdutório sobre Software Livre e Cultura Livre}{Introductory material about Free Software and Free Culture (pt-br)}}\\
 
-\section{Projects}
-\textbf{The Parliamentary Radar} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
-It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
-This project has been received 4 awards since 2012.\\
-Technologies: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
+\sectionlang{br}{Projetos}
+\sectionlang{en}{Projects}
+%\section{Projects}
+\textbf{\langif{br}{Radar Parlamentar}{The Parliamentary Radar}} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
+\langif{br}%
+{O Radar Parlamentar é um aplicativo que determina ``semelhanças'' entre partidos \nohyphens{políticos} baseado na análise matemática dos dados de votações de projetos de lei na casa \nohyphens{legislativa}. Existem ainda algumas análises relativas a questões de gênero no Parlamento.\\
+Este projeto recebeu 4 premiações desde 2012.}%
+{It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
+This project has been received 4 awards since 2012.}\\
+\langif{br}%
+{Tecnologias}{Technologies}: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
 
-\textbf{Transparência Hacker (\textit{Hacker Transparency})}\\
-Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a HackerLab at the Congress, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.\\
-HackLab at Congress: \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}
-\section{Events}
-07/14 - \href{http://abraji.org.br/congresso/}{\textbf{9$^{th}$ Internation Investigative Journalism Congress}}\\
-Instructor of the "Coding for journalists" workshop.
+\textbf{Transparência Hacker \lang{en}{(\textit{Hacker Transparency})}}\\
+\langif{br}%
+{Membro da comunidade brasileira Transparência Hacker, que atua nas áreas de Governo Aberto, Transparência Pública, Dados Abertos e afins. A comunidade já criou o Ônibus Hacker, participou da criação do \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{Laboratório Hacker do Congresso Nacional}}, influenciou na formulação da Lei de Acesso à Informação e do Marco Civil da Internet, dentre outros.}%
+{Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{HackerLab at the Congress}}, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.}
 
-11/13 - \href{https://knightcenter.utexas.edu/pt-br/blog/00-14390-inscricoes-abertas-para-primeiro-curso-da-anj-com-o-centro-knight-introducao-ao-jornal}{\textbf{Introduction to Data Journalism MOOC}}\\
-Instructor of the "Programming" module of the cours. This course was organized by Knight Center and the brazilian National Journals Association
+\sectionlang{br}{Eventos}
+\sectionlang{en}{Events}
+07/14 - \href{http://abraji.org.br/congresso/}{\textbf{\langif{br}{9$^o$ Congresso Internacional de Jornalismo Investigativo}{9$^{th}$ Internation Investigative Journalism Congress}}}\\
+\langif{br}{Instrutor do workshop ``Programação para Jornalistas''}{Instructor of the ``Coding for journalists'' workshop}.
 
-11/13 - \href{http://2.encontro.dados.gov.br/encontro.html}{\textbf{II Brazilian National Conference of OpenData}}\\
-Chairman of the dataviz trail
+11/13 - \href{https://knightcenter.utexas.edu/pt-br/blog/00-14390-inscricoes-abertas-para-primeiro-curso-da-anj-com-o-centro-knight-introducao-ao-jornal}{\textbf{\langif{br}{Curso de Introdução ao Jornalismo de Dados}{Introduction to Data Journalism MOOC}}}\\
+\langif{br}{Instrutor do módulo ``Programação''. Curso organizado pelo Knight Center e pela \nohyphens{Associação} Brasileira de Jornais}{Instructor of the ``Programming'' module. Course organized by Knight Center and the brazilian National Journals Association}
+
+11/13 - \href{http://2.encontro.dados.gov.br/encontro.html}{\textbf{\langif{br}{II Encontro Nacional de Dados Abertos}{II Brazilian National Conference of OpenData}}}\\
+\langif{br}{\textit{Chairman} da Trilha de Visualização de Dados}{Chairman of the dataviz trail}
 
 07/13 - \href{http://rodadahacker.com/}{\textbf{II RodAda Hacker}}\\
-Mentor on the second edition of "Rodada Hacker", a one day workshop that aims to give woman autonomy with techonologies
+\langif{br}%
+{Mentor na segunda edição da ``RodAda Hacker, um workshop de um dia que objetiva dar a mulheres mais autonomia com tecnologias}%
+{Mentor on the second edition of ``RodAda Hacker'', a one day workshop that aims to give woman autonomy with techonologies}
 
 05/13 - \href{http://www2013.org/}{\textbf{www2013 Conference}}\\
-Speaker on the "eGov and Open Data Camp" discussion, talking about "The challenges and opportunities of data journalism"
+\langif{br}{Palestrante na mesa ``\textit{eGov and Open Data Camp}'', falando sobre ``\textit{The challenges and opportunities of data journalism}''}%
+{Speaker on the ``eGov and Open Data Camp'' discussion, talking about ``The challenges and opportunities of data journalism''}
 
 03/13 - \href{http://rodadahacker.com/}{\textbf{I RodAda Hacker}}\\
-Mentor on the first edition of "Rodada Hacker", a one day workshop that aims to give woman autonomy with techonologies
+\langif{br}%
+{Mentor na primeira edição da ``RodAda Hacker, um workshop de um dia que objetiva dar a mulheres mais autonomia com tecnologias}%
+{Mentor on the first edition of ``RodAda Hacker'', a one day workshop that aims to give woman autonomy with techonologies}
 
 10/12 - \href{http://yapcbrasil.org.br/2012/talk/110}{\textbf{YAPC::Brasil 2012}}\\
-"The Parliamentary Radar: Unraveling the legislative politics"
+\langif{br}%
+{Palestrante: ``Radar Parlamentar: Desvendando a política legislativa''}%
+{Speaker: ``The Parliamentary Radar: Unraveling the legislative politics''}
 
-05/10 - \href{http://artigo19.org/infoedireitoseu/?p=560}{\textbf{The Right to Information Access}}\\
-Speaker about the Right to Information Access at PUC Univeristy
+05/10 - \href{http://artigo19.org/infoedireitoseu/?p=560}{\textbf{\langif{br}{O direito ao Acesso à Informação}{The Right to Information Access}}}\\
+\langif{br}%
+{Palestrante sobre o Direito ao Acesso à Informação num debate na PUC-SP}%
+{Speaker about the Right to Information Access at PUC Univeristy}
 %
 %\\
 %
