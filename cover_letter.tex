@@ -1,0 +1,106 @@
+%!TEX TS-program = xelatex
+\documentclass[]{friggeri-cover-letter}
+\usepackage[brazil,english]{babel}
+\usepackage{xltxtra}
+\defaultfontfeatures{Ligatures=TeX}
+\usepackage{afterpage}
+\usepackage{hyperref}
+\usepackage{hyphenat}
+\usepackage{color}
+\usepackage{xcolor}
+\usepackage{fancyhdr}
+\usepackage{multilanguage}
+
+%\setdoclang{br}{brazil}
+\setdoclang{en}{english}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black},
+    pdfborder={0 0 0},
+}
+
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\rhead{}
+\rfoot{{%
+    \footnotesize{%
+        \langif{br}{%
+        %lang pt-br
+            Veja a última versão deste documento em:
+            \href{https://github.com/diraol/cv/releases/}{https://github.com/diraol/cv/releases/}%
+        }{%
+        %lang en
+            See the lastest version of this document at:
+            \href{https://github.com/diraol/cv/releases/}{https://github.com/diraol/cv/releases/}%
+        }
+}}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\hypersetup{
+    pdftitle={Diego Rabatone Oliveira Resume},
+    pdfauthor={Diego Rabatone Oliveira},
+    pdfsubject={Carta de Apresentação/Cover Letter},
+    pdfkeywords={Diego Rabatone, diraol},
+    colorlinks=false,       % no lik border color
+   allbordercolors=white    % white border color for all
+}
+%\addbibresource{bibliography.bib}
+\RequirePackage{xcolor}
+\definecolor{pblue}{HTML}{0395DE}
+
+\begin{document}
+\thispagestyle{empty}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\langif{br}{%
+%% text for lang pt-br
+%
+%}{%
+%% text for lang pt-br
+%
+%}
+%\langif{br}{}{}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%header{name}{lastname}{title}{city}{country}{phone}{email}{homepage}
+\header{Diego}{Rabatone O.}{\langif{br}{Engenheiro de Computação}{Computer Engineer}}{São Paulo}{\langif{br}{Brasil}{Brazil}}{+55~(11)~9~8231~4249}{diraol@diraol.eng.br}{http://cv.diraol.eng.br}
+
+\textbf{To: Free Software Foundation}\\
+\textbf{About:} Boston-based individual to be its full-time Web Developer\\
+Boston, MA\\
+~\\
+~\\
+~\\
+Dear Sir or Madam,\\
+~\\
+please find enclosed my CV in application for the position advertised on the Free Software Foundation website on May 07, 2015.
+
+Advocating for Free Software, as in Freedom, is one of the main objectives on my professional and activist life.
+That's why I've founded a Free Software Group while on Univeristy, and why using, producing and contributing to Free Softwares was aways prerequisite on my jobs and personal projects, and everything I've produced on my recent jobs are on my github account.
+
+I have started my Web Developer carrer in 2002, while in school, learning mostly on web forums. My engineering graduation course has prepared me to the challanges of technological carrer, in which there is a constant need for learning new technologies, and also has thought me the relevance of multidisciplinary knowledges.  
+
+My main experience is on the web field, where I've worked with Javascript, HTML, CSS, Drupal, Wordpress, Django and Mediwiki, MySQL and PostgreSQL but I also have some experience as SysAdmin, both as professional and activist.
+During my acitivies on the university Free Software group (PoliGNU), I've taught Gimp, Inkscape, LaTeX among others on workshops to the community.
+
+I have a strong independent profile, but I also work well with a group or a community contributing on management and strategic decisions when required. I am able to take on the responsibility of this position immediately, and have the enthusiasm and determination to ensure that I make a success of it. Work at FSF would be a life objective achievement. 
+
+Thank you for taking the time to consider this application and I look forward to hearing from you in the near future.
+
+\vfill
+
+\hfill Yours sincerely,
+
+~\\
+
+\hfill \textbf{Diego Rabatone Oliveira}
+
+\vfill
+
+\footnotesize{\thinfont\color{lightgray}\textit{Attached: curriculum vitae - also found at:} \textit{\url{http://github.com/diraol/cv/releases}}}
+
+\end{document}

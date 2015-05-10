@@ -93,6 +93,30 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Header %
 %%%%%%%%%%
 
+\RequirePackage{collection}
+\newcommand*{\marvosymbol}[1]{}
+\renewcommand*{\marvosymbol}[1]{{\fontfamily{mvs}\fontencoding{U}\fontseries{m}\fontshape{n}\selectfont\char#1}}
+
+\newcommand*{\phone}[1]{\mobilephonesymbol #1}
+\newcommand*{\email}[1]{\emailsymbol #1}
+% defines one's home page (optional)
+% usage: \homepage{<url>}
+\newcommand*{\homepage}[1]{\homepagesymbol #1}
+\newcommand*{\mobilephonesymbol}{}
+\newcommand*{\fixedphonesymbol}{}
+\newcommand*{\faxphonesymbol}{}
+\newcommand*{\emailsymbol}{}
+\newcommand*{\homepagesymbol}{}
+\renewcommand*{\mobilephonesymbol}{\marvosymbol{72}~}
+\renewcommand*{\fixedphonesymbol}{\marvosymbol{84}~}
+\renewcommand*{\faxphonesymbol}{\marvosymbol{117}~}
+\renewcommand*{\emailsymbol}{\marvosymbol{66}~}
+\renewcommand*{\homepagesymbol}{{\Large\marvosymbol{205}}~}
+
+\ifthenelse{\isundefined{\@phone}}{}{\addtomaketitle{\phonesymbol\@phone}}%
+\ifthenelse{\isundefined{\@email}}{}{\addtomaketitle{\emailsymbol\@email}}%
+\ifthenelse{\isundefined{\@homepage}}{}{\addtomaketitle{\homepagesymbol\@homepage}}%
+
 \RequirePackage{tikz}
 
 \newcommand{\rolefont}{%
@@ -101,20 +125,23 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \color{white}%
 }
 
-\newcommand{\header}[3]{%
-  \begin{tikzpicture}[remember picture,overlay]
-    \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=3cm] (box) at (current page.north){};
-    \node [anchor=center] (name) at (box) {%
-      \fontsize{28pt}{58pt}\color{header}%
-      {\thinfont #1}~{\bodyfont  #2}
-    };
-    \node [anchor=north] at (name.south) {%
-      \fontsize{14pt}{24pt}\color{pblue}%
-      \bodyfont #3%
-    };
-  \end{tikzpicture}
-  \vspace{0.5cm}
-  \vspace{-2\parskip}
+\newcommand{\header}[8]{%
+	\begin{center}
+	{%
+		\fontsize{28pt}{58pt}\color{pblue}%
+      	{\thinfont #1}~{\bodyfont  #2  | }
+      	\fontsize{14pt}{24pt}\color{lightgray}%
+      	\bodyfont #3%
+    }\\
+    \vspace{0.3cm}
+ 	{\thinfont\color{lightgray}
+		#4 - #5 \\
+	  	\phone{#6}~|~
+	  	\email{\href{mailto:#7}{#7}}~|~
+	  	\homepage{\url{#8}}
+	  	\vspace{1.5cm}
+  	}
+	\end{center}
 }
 
 
@@ -328,5 +355,5 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 % Other tweaks %
 %%%%%%%%%%%%%%%%
 
-\RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
+\RequirePackage[left=2cm,top=2cm,right=2cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
