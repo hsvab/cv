@@ -1,0 +1,21 @@
+http://radarparlamentar.polignu.org/ (http://github.com/radar-parlamentar)
+http://www.mapadaparticipacao.org.br/
+http://participacao.mj.gov.br/ (https://github.com/pensandoodireito)
+http://polignu.org
+http://trilhasp.datapublika.com
+http://blog.estadaodados.com/
+http://estadaodados.com/basometro/ (http://github.com/diraol/basometro)
+http://estadaodados.com/ringue2014/ (https://github.com/diraol/potencial)
+http://politica.estadao.com.br/eleicoes/2014/apuracao/segundo-turno/presidente/ (https://github.com/diraol/beforeafter_map_brazil_2014)
+http://grupoestado.cartodb.com/u/estadao/viz/c3d8a85a-0bba-11e4-b480-0e10bcd91c2b/embed_map
+http://grupoestado.cartodb.com/u/estadao/viz/09dfeda2-6f27-11e4-b8de-0e018d66dc29/embed_map
+http://www.estadao.com.br/infograficos/os-sete-mitos-das-eleicoes-2014,politica,356428
+http://estadaodados.com/cruzador (https://github.com/diraol/ibope)
+http://estadaodados.com/perfil_eleitorado/ (https://github.com/estadaoDados/perfil_eleitorado)
+http://estadaodados.com/coligacoes (https://github.com/diraol/coligacoes)
+http://estadaodados.com/eleicoes2012 (https://github.com/diraol/apuracao2012)
+http://estadaodados.com/santamaria/
+http://estadaodados.com/piramide_eleitoral/ (https://github.com/diraol/piramide_eleitoral)
+http://atlas.estadaodados.com/
+http://poligen.polignu.org
+http://escritoriopiloto.org
