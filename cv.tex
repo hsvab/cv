@@ -11,8 +11,8 @@
 \usepackage{fancyhdr}
 \usepackage{multilanguage}
 
-\setdoclang{br}{brazil}
-%\setdoclang{en}{english}
+%\setdoclang{br}{brazil}
+\setdoclang{en}{english}
 
 \hypersetup{
     colorlinks,
@@ -72,7 +72,9 @@
 \fcolorbox{white}{gray}{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
 
 }}
-
+%
+% LATERAL
+%
 % In the aside, each new line forces a line break
 \begin{aside}
   \section{\langif{br}{Endereço}{Address}}
@@ -86,14 +88,14 @@
     \href{mailto:diraol@members.fsf.org}{\textbf{diraol@}\\members.fsf.org}
     \href{mailto:diraol@usp.br}{\textbf{diraol@}\\usp.br}
     ~
-  \section{IRC}
-    \#diraol (at) irc.freenode.net
-    ~
   \section{Twitter}
     \href{http://twitter.com/diraol}{@diraol}
     ~
   \section{LinkedIn}
     \href{http://br.linkedin.com/in/diraol}{br.linkedin.com/in/diraol}
+    ~
+  \section{IRC}
+    \#diraol (at) irc.freenode.net
     ~
   \section{Web \& Git}
     \href{http://cv.diraol.eng.br}{cv.diraol.eng.br}
@@ -105,7 +107,32 @@
     \textbf{\langif{br}{Francês}{French}}\includegraphics[scale=0.40]{img/1stars.png}
     \textbf{\langif{br}{Espanhol}{Spanish}}\includegraphics[scale=0.40]{img/1stars.png}
 \end{aside}
-
+%
+% EDUCAÇÃO
+%
+\sectionlang{br}{Educação}
+\sectionlang{en}{Education}
+\begin{entrylist}
+  \entry
+    {2005 - 2014}
+    {\langif{br}{Graduação em Engenharia Elétrica}{Undergraduate in Electrical Engineering}}
+    {Universidade de São Paulo, Brazil}
+    {\langif{br}{Ênfase Computação - Concluída em 2014}{Minor in Computer and Digital Systems - Concluded in 2014}%
+    %Main subjects: Matematics and Physics, Programming, Operational Research, Telecommunication Systems, Digital and Analogical Electronics.\\
+    %\emph{Title of the Thesis: "Development, Management and Migrations of web contents and applications".}\\
+    %\emph{Thesis activity carried out during an internship period at Atitlan Engineering SRL.}\\
+    }
+  \entry
+    {2000 - 2002}
+    {\langif{br}{Ensino Médio}{High School}}
+    {Colégio Rio Branco, São Paulo, Brasil}
+    {%Scientific Secondary School.\\
+    %Main subjects: Matematics, Physics, Computer Science.
+    }
+\end{entrylist}
+%
+% EXPERIÊNCIA (parte 1)
+%
 \sectionlang{br}{Experiência}
 \sectionlang{en}{Experience}
 \begin{entrylist}
@@ -114,8 +141,7 @@
     {\langif{br}{Co-fundador, coordenador e membro}{Co-Founder, coordinator and member}}
     {\href{http://polignu.org}{PoliGNU}}
     {\langif{br}{PoliGNU - Grupo de Estudos de Software Livre da Poli-USP}{PoliGNU - Poli-USP Free Software Studies Group}\\
-    \langif{br}{Organização e planejamento, Gestão de Infraestrutura (SysAdmin e website)}{Organization and planning, Infrastructure management (SysAdmin, website)}\\
-     \langif{br}{Divulgação e apresentações em conferências, seminários, workshops, etc}{Disclosure and presentation at conferences, seminars, workshops, etc}\\
+    \langif{br}{Organização e planejamento, Gestão de Infraestrutura (SysAdmin e website). Apresentações em conferências, seminários, workshops, etc.}{Organization and planning, Infrastructure management (SysAdmin, website). Disclosure and presentation at conferences, seminars, workshops, etc.}\\
      \href{http://polignu.org}{http://polignu.org}\\}
   \entry
     {\langif{br}{Ago/15 - Hoje}{Aug/15 - now}}
@@ -125,11 +151,24 @@
      \langif{br}{Diretor de tecnologia, com foco principal em tecnologias para coleta, tratamento, análise e visualização de dados.}{CTO with main focus on technologies related to data extraction, gathering, treatment, analysis and visualization.)}\\
      \href{http://ask.ar.com}{http://ask.ar.com}\\}
   \entry
+    {\langif{br}{Mar/15 - Hoje}{Mar/15 - now}}
+    {\langif{br}{Pesquisador}{Researcher}}
+    {\href{http://ncc.unesp.br}{NCC-UNESP}}
+    {\langif{br}{Pesquisa e desenvolvimento na área de Redes Definidas por Software (Software-Defined Networking (SDN)) sobre WAN para aplicações científicas com alta demanda de dados, desenvolvendo software para redes de alta taxa de transferência (\char`\~1 Tbps) com foco no cluster SPRACE vinculado ao LHC-CERN.}{Work with Research and Development on Software-Defined Networking (SDN) over Wan for Data-Intensive Science, creating software for high speed data transfers (\char`\~1 Tbps), aiming the SPRACE cluster of the Large Hadron Collider (LHC-CERN).}\\}
+  \entry
+    {\langif{br}{Nov/15 - Fev/16}{Nov/15 - Feb/16}}
+    {\langif{br}{Desenvolvedor}{Developer}}
+    {\href{https://okfn.org/}{OKF}}
+    {OKF - Open Knowledge Foundation\\
+    \langif{br}{Desenvolvimento de aplicação web em parceria com uma bolsista das Filipinas, utilizando tecnologias como NodeJS, Heroku e PostgreSQL.}%
+    {Development of web application with a fellow from Phillipines. Technologies: NodeJS, Heroku and PostgreSQL.}
+    \href{http://washresilience.org/}{http://washresilience.org/}\\}
+  \entry
     {\langif{br}{Ago/15 - Out/15}{Aug/15 - Oct/15}}
     {\langif{br}{Pesquisador Sênior }{Senior Researcher}}
     {\href{https://fga.unb.br/lappis}{LAPPIS/UNB e CGU}}
-    {\langif{br}{Elaboração de especificação de aplicação para pesquisa e disseminação de índice de transparência governamentais (MIBT)}%
-                {Built specification of a software to aquire and release governamental transparency indexes.}\\
+    {\langif{br}{Elaboração de especificação de aplicação para pesquisa e disseminação de índice de transparência governamentais (MIBT).}%
+                {Designed a software to aquire and release governamental transparency indexes.}\\
      \href{https://gitlab.com/mibt/mibt}{https://gitlab.com/mibt/mibt}\\}
   \entry
     {\langif{br}{Ago/15 - Out/15}{Aug/15 - Oct/15}}
@@ -142,57 +181,19 @@
     {\langif{br}{Fev/15 - Mai/15}{Feb/15 - May/15}}
     {\langif{br}{Consultor PNUD}{UNDP Consultant}}
     {\href{http://participacao.mj.gov.br}{\langif{br}{Ministério da Justiça}{Brazilian Ministery of Justicy}}}
-    {%\langif{br}{Consultor pelo Programa das Nações Unidas para o Desenvolvimento}{United Nations Development Programme IT Consultant}\\
-    \langif{br}{Planejamento e desenvolvimento das plataformas de Consulta Pública do Ministério da Justiça, implementação de metodologias ágeis na equipe de desenvolvimento.}%
-               {Planning and development of Brazilian Justice Ministery Public Feedback Platforms; Implementation of agile methodology.}\\
-    }
-  \entry
-    {\langif{br}{Jul/12 - Fev/15}{Jul/12 - Feb/15}}
-    {\langif{br}{Analista de Mídias Digitais}{Digital Media Analist}}
-    {O Estado de S.Paulo S/A}
-    {\langif{br}%
-        {Desenvolvedor na equipe de jornalismo de dados}%
-        {Main developer of the data driven journalism team}
-        ("\href{http://estadaodados.com}{Estadão Dados}")\\
-     \langif{br}{Trabalho com dados: extração, tratamento, união, processamento, análise e visualização}{Data extraction, scraping, gathering, processing, analysis and visualization}\\
-     \href{http://estadaodados.com}{http://estadaodados.com}\\}
-   \entry
-    {\langif{br}{Jul/08 - Dez/13}{Jul/08 - Dec/13}}
-    {\langif{br}{Administrador de Sistemas voluntário}{Volunteer SysAdmin}}
-    {Escritório Piloto - Poli-USP}
-    {\langif{br}%
-        {Implementação e manutenção de rede local com servidor OpenLDAP, \nohyphens{compartilhamento} de arquivos (NFS), servidor web (apache), virtualização (XEN) e DNS local\\
-        Concepção, desenvolvimento e manutenção de website institucional (Drupal)\\}%
-        {Design and Setup of LAN, with OpenLDAP server, File Sharing (NFS), WebServer, Virtualization (XEN) and local DNS Server\\
-     Design, development and management of an institucional website on Drupal\\}
-    }
-   \entry
-    {\langif{br}{Ago/10 - Ago/11}{Aug/10 - Aug/11}}
-    {\langif{br}{Professor de Matemática}{Math Teacher}}
-    {ACEPUSP}
-    {\langif{br}{Vurso preparatório para vestibular para \nohyphens{estudantes} de baixa renda}{Preparatory course to low income students}\\}
-   \entry
-    {\langif{br}{Ago/10 - Dez/10}{Aug/10 - Dec/10}}
-    {\langif{br}{Voluntário}{Volunteer}}
-    {Universidade de São Paulo}
-    {\langif{br}{Modelagem de base de dados}%para uma nova versão do Sistema de \nohyphens{Avaliação} de Ensino}%
-    {Database modeling}\\% for the new version of the Teaching Evaluation System}\\%
-    \href{https://github.com/SuperNovaPOLIUSP}{https://github.com/SuperNovaPOLIUSP}\\}
-%   \entry
-%    {\langif{br}{Jan/09 - Ago/10}{Jan/09 - Aug/10}}
-%    {\langif{br}{Voluntário}{Volunteer}}
-%    {Escola de Governo}
-%    {\langif{br}{Desenvolvimento de website institucional (Joomla)}{Design, development and management of institucional website on Joomla}\\
-%     \langif{br}{Orientação e mentoria de estudantes do curso de Formação de Governantes}{Orientation and Mentoring of Governor Formation Course Students}\\}
-%   \entry
-%    {\langif{br}{Mar/05 - Jun/06}{Mar/05 - Jun/06}}
-%    {\langif{br}{Bolsista}{Fellow}}
-%    {Universidade de São Paulo}
-%    {\langif{br}{Desenvolvedor do primeiro Sistema de Avaliação de Ensino da Escola \nohyphens{Politécnica}}{Developer of the first Digital Teaching Evaluation System}}
+    {\langif{br}{Consultor pelo Programa das Nações Unidas para o Desenvolvimento}{United Nations Development Programme IT Consultant}\\
+    \langif{br}{Planejamento e desenvolvimento das plataformas de Consulta Pública do Ministério da Justiça. Implementação de metodologias ágeis.}%
+               {Planning and development of Brazilian Justice Ministery Public Feedback Platforms. Implementation of agile methodology.}\\
+    \href{http://pensandoodireito.mj.gov.br/}{http://pensandoodireito.mj.gov.br/} e \href{http://github.com/pensandoodireito}{http://github.com/pensandoodireito}\\}
 \end{entrylist}
-
+%
+% NOVA PÁGINA
+%
 \newpage
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%
+% BARRA LATERAL
+%
 \begin{aside}
 ~
 ~
@@ -240,28 +241,119 @@
       \href{http://olhares.com/diraol}{\langif{br}{Fotografia}{Photograpy}}
       Tae-Kwon-Do
 \end{aside}
-
-\sectionlang{br}{Educação}
-\sectionlang{en}{Education}
+%
+% EXPERIÊNCIA (parte 2)
+%
+\sectionlang{br}{Experiência - cont.}
+\sectionlang{en}{Experience - cont.}
 \begin{entrylist}
   \entry
-    {2005 - 2014}
-    {\langif{br}{Graduação em Engenharia Elétrica}{Undergraduate in Electrical Engineering}}
-    {Universidade de São Paulo, Brazil}
-    {\langif{br}{Ênfase Computação - Concluída em 2014}{Minor in Computer and Digital Systems - Concluded in 2014}%
-    %Main subjects: Matematics and Physics, Programming, Operational Research, Telecommunication Systems, Digital and Analogical Electronics.\\
-    %\emph{Title of the Thesis: "Development, Management and Migrations of web contents and applications".}\\
-    %\emph{Thesis activity carried out during an internship period at Atitlan Engineering SRL.}\\
+    {\langif{br}{Jul/12 - Fev/15}{Jul/12 - Feb/15}}
+    {\langif{br}{Analista de Mídias Digitais}{Digital Media Analist}}
+    {O Estado de S.Paulo S/A}
+    {\langif{br}%
+        {Desenvolvedor na equipe de jornalismo de dados}%
+        {Main developer of the data driven journalism team}
+        ("\href{http://estadaodados.com}{Estadão Dados}")\\
+     \langif{br}{Trabalho com dados: extração, tratamento, união, processamento, análise e visualização.}{Data extraction, scraping, gathering, processing, analysis and visualization.}\\
+     \href{http://estadaodados.com}{http://estadaodados.com}\\}
+   \entry
+    {\langif{br}{Jul/08 - Dez/13}{Jul/08 - Dec/13}}
+    {\langif{br}{Administrador de Sistemas voluntário}{Volunteer SysAdmin}}
+    {Escritório Piloto - Poli-USP}
+    {\langif{br}%
+        {Implementação e manutenção de rede local com servidor OpenLDAP, \nohyphens{compartilhamento} de arquivos (NFS), servidor web (apache), virtualização (XEN) e DNS local\\
+        Concepção, desenvolvimento e manutenção de website institucional (Drupal).\\}%
+        {Design and Setup of LAN, with OpenLDAP server, File Sharing (NFS), WebServer, Virtualization (XEN) and local DNS Server\\
+     Design, development and management of an institucional website on Drupal.\\}
     }
-  \entry
-    {2000 - 2002}
-    {\langif{br}{Ensino Médio}{High School}}
-    {Colégio Rio Branco, São Paulo, Brasil}
-    {%Scientific Secondary School.\\
-    %Main subjects: Matematics, Physics, Computer Science.
-    }
+   \entry
+    {\langif{br}{Ago/10 - Ago/11}{Aug/10 - Aug/11}}
+    {\langif{br}{Professor de Matemática}{Math Teacher}}
+    {ACEPUSP}
+    {\langif{br}{Vurso preparatório para vestibular para \nohyphens{estudantes} de baixa renda}{Preparatory course to low income students}\\}
+   \entry
+    {\langif{br}{Ago/10 - Dez/10}{Aug/10 - Dec/10}}
+    {\langif{br}{Voluntário}{Volunteer}}
+    {Universidade de São Paulo}
+    {\langif{br}{Modelagem de base de dados}%para uma nova versão do Sistema de \nohyphens{Avaliação} de Ensino}%
+    {Database modeling}\\% for the new version of the Teaching Evaluation System}\\%
+    \href{https://github.com/SuperNovaPOLIUSP}{https://github.com/SuperNovaPOLIUSP}\\}
+   \entry
+    {\langif{br}{Jan/09 - Ago/10}{Jan/09 - Aug/10}}
+    {\langif{br}{Voluntário}{Volunteer}}
+    {Escola de Governo}
+    {\langif{br}{Desenvolvimento de website institucional (Joomla)}{Design, development and management of institucional website on Joomla}\\
+     \langif{br}{Orientação e mentoria de estudantes do curso de Formação de Governantes}{Orientation and Mentoring of Governor Formation Course Students}\\}
+   \entry
+    {\langif{br}{Mar/05 - Jun/06}{Mar/05 - Jun/06}}
+    {\langif{br}{Bolsista}{Fellow}}
+    {Universidade de São Paulo}
+    {\langif{br}{Desenvolvedor do primeiro Sistema de Avaliação de Ensino da Escola \nohyphens{Politécnica}}{Developer of the first Digital Teaching Evaluation System}}
 \end{entrylist}
+%
+% PROJETOS
+%
+\sectionlang{br}{Projetos}
+\sectionlang{en}{Projects}
+%\section{Projects}
+\textbf{\langif{br}{Radar Parlamentar}{The Parliamentary Radar}} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
+\langif{br}%
+{O Radar Parlamentar é um aplicativo que determina ``semelhanças'' entre partidos \nohyphens{políticos} baseado na análise matemática dos dados de votações de projetos de lei na casa \nohyphens{legislativa}. Existem ainda algumas análises relativas a questões de gênero no Parlamento.\\
+Este projeto recebeu 4 premiações desde 2012.}%
+{It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
+This project has been received 4 awards since 2012.}\\
+\langif{br}%
+{Tecnologias}{Technologies}: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
 
+\textbf{Transparência Hacker \lang{en}{(\textit{Hacker Transparency})}}\\
+\langif{br}%
+{Membro da comunidade brasileira Transparência Hacker, que atua nas áreas de Governo Aberto, Transparência Pública, Dados Abertos e afins. A comunidade já criou o Ônibus Hacker, participou da criação do \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{Laboratório Hacker do Congresso Nacional}}, influenciou na formulação da Lei de Acesso à Informação e do Marco Civil da Internet, dentre outros.}%
+{Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{HackerLab at the Congress}}, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.}
+%
+% PUBLICAÇÕES
+%
+\sectionlang{br}{Publicações}
+\sectionlang{en}{Publications}
+{\href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}}\\
+\emph{\langif{br}{Tutorial sobre como coletar, processar e analisar dados do Twitter}{Tutorial on how to gather, process and analyse twitter traffic}}\\}\\
+%{\href{http://diraol.polignu.org}{\textbf{DiRaOLinux}}\\
+%\emph{\langif{br}{Blog para documentar e compartilhar experiências diárias com software livre}{Blog to document and share daily discovers and issues fixes}}\\}\\
+\href{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}{\textbf{Caderno do PoliGNU - Vol 1 - Software e Cultura Livres}}\\
+\emph{\langif{br}{Material introdutório sobre Software Livre e Cultura Livre}{Introductory material about Free Software and Free Culture (pt-br)}}
+%
+% NOVA PÁGINA
+%
+\newpage
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+%
+% LATERAL
+%
+\begin{aside}
+~
+~
+~
+  \section{\langif{br}{Outras Tecnologias}{Other Techs}}
+    CartoDB
+    Django
+    Drupal
+    Gimp
+  	Git
+    Inkscape
+    Mediawiki
+    MySQL/MariaDB
+    NFS
+    Nginx
+    OpenLDAP
+    Postgres
+    QuantumGis
+    Varnish
+    Wordpress
+    Xen
+\end{aside}
+%
+% CURSOS E CERTIFICAÇÕES
+%
 \sectionlang{br}{Cursos e Certificações}
 \sectionlang{en}{Courses and Certifications}
 \begin{entrylist}
@@ -307,59 +399,19 @@
     {\langif{br}{PythonPro}{PythonPro}}
     {\href{https://adm.python.pro.br/cursos}{https://adm.python.pro.br/cursos}}
 \end{entrylist}
-
-\sectionlang{br}{Publicações}
-\sectionlang{en}{Publications}
-{\href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}}\\
-\emph{\langif{br}{Tutorial sobre como coletar, processar e analisar dados do Twitter}{Tutorial on how to gather, process and analyse twitter traffic}}\\}\\
-%{\href{http://diraol.polignu.org}{\textbf{DiRaOLinux}}\\
-%\emph{\langif{br}{Blog para documentar e compartilhar experiências diárias com software livre}{Blog to document and share daily discovers and issues fixes}}\\}\\
-\href{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}{\textbf{Caderno do PoliGNU - Vol 1 - Software e Cultura Livres}}\\
-\emph{\langif{br}{Material introdutório sobre Software Livre e Cultura Livre}{Introductory material about Free Software and Free Culture (pt-br)}}\\
-
+%
+% NOVA PÁGINA
+%
 \newpage
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
-\begin{aside}
-~
-~
-~
-  \section{\langif{br}{Outras Tecnologias}{Other Techs}}
-    CartoDB
-    Django
-    Drupal
-    Gimp
-  	Git
-    Inkscape
-    Mediawiki
-    MySQL/MariaDB
-    NFS
-    Nginx
-    OpenLDAP
-    Postgres
-    QuantumGis
-    Varnish
-    Wordpress
-    Xen
-\end{aside}
-
-\sectionlang{br}{Projetos}
-\sectionlang{en}{Projects}
-%\section{Projects}
-\textbf{\langif{br}{Radar Parlamentar}{The Parliamentary Radar}} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
-\langif{br}%
-{O Radar Parlamentar é um aplicativo que determina ``semelhanças'' entre partidos \nohyphens{políticos} baseado na análise matemática dos dados de votações de projetos de lei na casa \nohyphens{legislativa}. Existem ainda algumas análises relativas a questões de gênero no Parlamento.\\
-Este projeto recebeu 4 premiações desde 2012.}%
-{It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
-This project has been received 4 awards since 2012.}\\
-\langif{br}%
-{Tecnologias}{Technologies}: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
-
-\textbf{Transparência Hacker \lang{en}{(\textit{Hacker Transparency})}}\\
-\langif{br}%
-{Membro da comunidade brasileira Transparência Hacker, que atua nas áreas de Governo Aberto, Transparência Pública, Dados Abertos e afins. A comunidade já criou o Ônibus Hacker, participou da criação do \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{Laboratório Hacker do Congresso Nacional}}, influenciou na formulação da Lei de Acesso à Informação e do Marco Civil da Internet, dentre outros.}%
-{Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{HackerLab at the Congress}}, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.}
+%
+% EVENTOS
+%
 \sectionlang{br}{Eventos}
 \sectionlang{en}{Events}
+{\footnotesize{\langif{br}{Dez/15}{Dec/15}}} - \href{http://www.lets.go.gov.br/}{\textbf{Hackatona Let's GO}}\\
+\langif{br}{Mentor na Hackathona promovida pela Secretaria de Estado de Gestão e Planejamento do Governo de Goiás}{Mentor on the Hackathon promoted by Goiás State Government Planning and Management Secretary}.
+
 {\footnotesize{\langif{br}{Out/15}{Oct/15}}} - \href{http://www.hackagenda.com.br/evento/sesi-cultura-digital-2015-hackathon-o-museu-do-seculo-xxi/}{\textbf{SESI Cultura Digital 2015 + Hackathon “O museu do século XXI”}}\\
 \langif{br}{Instrutor do workshop ``mapeamento com \textbf{CartoDB}'' e mentor dos grupos participantes do Hackathon}{Instructor of the ``Mapping with CartoDB'' workshop and mentor of the Hackathon participant groups}.
 
