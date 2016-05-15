@@ -56,6 +56,10 @@
              "Other Jobs":{color:CLR.experience, alpha:0, link:'#experience-other-jobs'},
              "Other Experiencess":{color:CLR.experience, alpha:0, link:'#experience-other-experiences'},
              "O Estado de S.Paulo":{color:CLR.experience, alpha:0, link:'#experience-estadao'},
+             "Ministério da Justiça":{color:CLR.experience, alpha:0, link:'#experience-mj'},
+             "Fundação Getúlio Vargas":{color:CLR.experience, alpha:0, link:'#experience-gvces'},
+             "Open Knowledge Foundation":{color:CLR.experience, alpha:0, link:'#experience-okf'},
+             "UNESP":{color:CLR.experience, alpha:0, link:'#experience-unesp'},
              PoliGNU:{color:CLR.experience, alpha:0, link:'#experience-polignu'},
 
           //Code
@@ -410,6 +414,10 @@
           case 'experience-other-experiences':
           case 'experience-other-jobs':
           case 'experience-estadao':
+          case 'experience-mj':
+          case 'experience-gvces':
+          case 'experience-okf':
+          case 'experience-unesp':
           case 'experience-polignu':
           case 'education-formal':
           case 'education-complementary':
@@ -469,6 +477,10 @@
               "Other Experiencess":{},
               "Other Jobs":{},
               "O Estado de S.Paulo":{},
+              "Ministério da Justiça":{},
+              "Fundação Getúlio Vargas":{},
+              "Open Knowledge Foundation":{},
+              "UNESP":{},
               PoliGNU:{}
         },
         Coding:{
