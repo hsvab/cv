@@ -179,9 +179,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \setlength{\tabcolsep}{0pt}
 \newenvironment{entrylist}{%
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}}ll}%
 }{%
-  \end{tabular*}
+  \end{tabular*}%
 }
 \renewcommand{\bfseries}{\headingfont\color{headercolor}}
 \newcommand{\entry}[4]{%
@@ -189,8 +189,10 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=pblue} #3}\\%
-    #4\vspace{\parsep}%
-  }\\}
+    {#4\vspace{\parsep}}%
+  }\\
+  ~
+  \\}
 
 
 %%%%%%%%%%%%%%
