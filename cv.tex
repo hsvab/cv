@@ -11,8 +11,8 @@
 \usepackage{fancyhdr}
 \usepackage{multilanguage}
 
-%\setdoclang{br}{brazil}
-\setdoclang{en}{english}
+\setdoclang{br}{brazil}
+%\setdoclang{en}{english}
 
 \hypersetup{
     colorlinks,
@@ -45,7 +45,7 @@
     pdftitle={Diego Rabatone Oliveira Resume},
     pdfauthor={Diego Rabatone Oliveira},
     pdfsubject={Resume/CV},
-    pdfkeywords={Diego Rabatone, diraol, cv, resume},
+    pdfkeywords={Diego Rabatone Oliveirar, diraol, cv, resume},
     colorlinks=false,       % no lik border color
    allbordercolors=white    % white border color for all
 }
@@ -92,7 +92,7 @@
     \href{http://twitter.com/diraol}{@diraol}
     ~
   \section{LinkedIn}
-    \href{http://br.linkedin.com/in/diraol}{br.linkedin.com/in/diraol}
+    \langif{br}{\href{https://br.linkedin.com/in/diraol}{br.linkedin.com/in/diraol}}{\href{https://www.linkedin.com/in/diraol/}{linkedin.com/in/diraol/}}
     ~
   \section{IRC}
     \#diraol (at) irc.freenode.net
@@ -118,18 +118,18 @@
     {\langif{br}{Graduação em Engenharia Elétrica}{Undergraduate in Electrical Engineering}}
     {Universidade de São Paulo, Brazil}
     {\langif{br}{Ênfase Computação - Concluída em 2014}{Minor in Computer and Digital Systems - Concluded in 2014}%
-    %Main subjects: Matematics and Physics, Programming, Operational Research, Telecommunication Systems, Digital and Analogical Electronics.\\
+    %Main subjects: Mathematics and Physics, Programming, Operational Research, Telecommunication Systems, Digital and Analogical Electronics.\\
     %\emph{Title of the Thesis: "Development, Management and Migrations of web contents and applications".}\\
     %\emph{Thesis activity carried out during an internship period at Atitlan Engineering SRL.}\\
-    }
+    }%
   \entry
     {2000 - 2002}
     {\langif{br}{Ensino Médio}{High School}}
     {Colégio Rio Branco, São Paulo, Brasil}
     {%Scientific Secondary School.\\
-    %Main subjects: Matematics, Physics, Computer Science.
-    }
-\end{entrylist}
+    %Main subjects: Mathematics, Physics, Computer Science.
+    }%
+\end{entrylist}%
 %
 % EXPERIÊNCIA (parte 1)
 %
@@ -137,54 +137,110 @@
 \sectionlang{en}{Experience}
 \begin{entrylist}
   \entry
-    {\langif{br}{Out/09 - Hoje}{Oct/09 - now}}
-    {\langif{br}{Co-fundador, coordenador e membro}{Co-Founder, coordinator and member}}
-    {\href{http://polignu.org}{PoliGNU}}
-    {\langif{br}{PoliGNU - Grupo de Estudos de Software Livre da Poli-USP}{PoliGNU - Poli-USP Free Software Studies Group}\\
-    \langif{br}{Organização e planejamento, Gestão de Infraestrutura (SysAdmin e website). Apresentações em conferências, seminários, workshops, etc.}{Organization and planning, Infrastructure management (SysAdmin, website). Disclosure and presentation at conferences, seminars, workshops, etc.}\\
-     \href{http://polignu.org}{http://polignu.org}\\}
+    {\langif{br}{Mar/16 - Hoje}{Mar/16 - now}}
+    {\langif{br}{Pesquisador}{Research Fellow}}
+    {\href{http://ncc.unesp.br}{NCC-UNESP}}
+    {\langif{br}{%
+         Pesquisa e desenvolvimento em Redes Definidas por Software (SDN).\\
+         Participação no time principal do \href{https://kytos.io}{Projeto Kytos}, atuando diretamente na concepção da arquitetura do projeto e em seu desenvolvimento.\\
+         Palavras Chave:
+       }{%
+         Software-Defined Networking (SDN) R\&D.
+         \href{https://kytos.io}{Kytos Project} core team member, working on the project architectural design and development,
+         including the python-openflow library and other network applications from Kytos Ecosystem.\\
+         Keywords:
+       }%
+     Python, SDN, OpenFlow, REST, API, d3js%
+     \hfill%
+     \href{https://kytos.io}{https://kytos.io}
+    }
   \entry
     {\langif{br}{Ago/15 - Hoje}{Aug/15 - now}}
     {\langif{br}{Co-fundador / Diretor de Tecnologia}{Co-Founder / CTO}}
-    {\href{http://ask.ar.com}{ASK-AR}}
-    {%ASK-AR - Analysis of Social Knowledge\\
-     \langif{br}{Sócio-Diretor de tecnologia, com foco principal em tecnologias para coleta, tratamento, análise e visualização de dados.}{CTO with main focus on technologies related to data extraction, gathering, treatment, analysis and visualization.)}\\
-     \href{http://ask.ar.com}{http://ask.ar.com}\\}
+    {\href{https://ask-ar.xyz}{ASK-AR}}
+    {\langif{br}{
+         Sócio-Diretor de tecnologia, com foco principal em tecnologias para coleta, tratamento, análise e visualização de dados.
+       }{
+         CTO with main focus on technologies related to data extraction, gathering, treatment, analysis and visualization.
+       }%
+     \hfill%
+     \href{https://ask-ar.xyz}{https://ask-ar.xyz}%
+    }
   \entry
-    {\langif{br}{Mar/15 - Hoje}{Mar/15 - now}}
-    {\langif{br}{Pesquisador}{Researcher}}
-    {\href{http://ncc.unesp.br}{NCC-UNESP}}
-    {\langif{br}{Pesquisa e desenvolvimento na área de Redes Definidas por Software (Software-Defined Networking (SDN)) sobre WAN para aplicações científicas com alta demanda de dados, desenvolvendo software para redes de alta taxa de transferência (\char`\~1 Tbps) com foco no cluster SPRACE vinculado ao LHC-CERN.}{Research and Development on Software-Defined Networking (SDN) over Wan for Data-Intensive Science, creating software for high speed data transfers (\char`\~1 Tbps), aiming the SPRACE cluster of the Large Hadron Collider (LHC-CERN).}\\}
+    {\langif{br}{Out/09 - Hoje}{Oct/09 - now}}
+    {\langif{br}{Co-fundador, coordenador e membro}{Co-Founder, coordinator and member}}
+    {\href{http://polignu.org}{PoliGNU}}
+    {\langif{br}{Grupo de Estudos de Software Livre da Poli-USP}{Poli-USP Free Software Studies Group} (\href{https://polignu.org}{PoliGNU})\\
+     \langif{br}{
+         Organização e planejamento, Gestão de Infraestrutura (SysAdmin e website).
+         Apresentações em conferências, seminários, workshops, etc.\\
+         Palavras Chave: Software Livre, projetos, divulgação
+       }{
+         Organization and planning, infrastructure management (SysAdmin, website),
+         disclosure and presentation at conferences, seminars, workshops, etc.\\
+         Keywords: Free Software, projects, advocating
+       }
+     \hfill 
+     \href{http://polignu.org}{http://polignu.org}%
+    }
   \entry
     {\langif{br}{Nov/15 - Fev/16}{Nov/15 - Feb/16}}
     {\langif{br}{Desenvolvedor}{Developer}}
     {\href{https://okfn.org/}{OKF}}
-    {OKF - Open Knowledge Foundation\\
-    \langif{br}{Desenvolvimento de aplicação web em parceria com uma bolsista das Filipinas, utilizando tecnologias como NodeJS, Heroku e PostgreSQL.}%
-    {Development of web application with a fellow from Phillipines. Technologies: NodeJS, Heroku and PostgreSQL.}
-    \href{http://washresilience.org/}{http://washresilience.org/}\\}
+    {\langif{br}{
+         Desenvolvimento de aplicação web com foco em Dados, em parceria
+         com uma bolsista da Open Knowledge Foundation (OKF) das Filipinas.\\
+         Palavras Chave:
+       }{
+         Development of data web application with an
+         Open Knowledge Foundation (OKF) fellow from Philippines.\\
+         Keywords:
+       }%
+     NodeJS, Heroku and PostgreSQL.
+     %\href{http://washresilience.org/}{http://washresilience.org/}
+    }
   \entry
     {\langif{br}{Ago/15 - Out/15}{Aug/15 - Oct/15}}
     {\langif{br}{Pesquisador Sênior }{Senior Researcher}}
     {\href{https://fga.unb.br/lappis}{LAPPIS/UNB e CGU}}
-    {\langif{br}{Elaboração de especificação de aplicação para pesquisa e disseminação de índice de transparência governamentais (MIBT).}%
-                {Designed a software to aquire and release governamental transparency indexes.}\\
-     \href{https://gitlab.com/mibt/mibt}{https://gitlab.com/mibt/mibt}\\}
+    {\langif{br}{
+         Especificação de aplicação para gestão de transparência governamental.\\
+         Palavras Chave: Python/Django, Dados Governamentais Abertos
+       }{
+         Designed Software to control governamental transparency indexes.\\
+         Keywords: Python, Django, OpenData, OpenGovernment, Transparency
+       }\\
+     \href{https://gitlab.com/mibt/mibt}{https://gitlab.com/mibt/mibt}
+   }
   \entry
     {\langif{br}{Ago/15 - Out/15}{Aug/15 - Oct/15}}
     {\langif{br}{Consultor}{Consultant}}
     {\href{http://www.gvces.com.br/}{FGV - GVCes}}
     {%\langif{br}{Fundação Getúlio Vargas - Centro de Estudos de Sustentabilidade (GVCes)}{Fundação Getúlio Vargas - Centro de Estudos de Sustentabilidade (GVCes)}\\
-    \langif{br}{Atuação como \textit{Product Owner} no desenvolvimento de um sistema de Gestão e Divulgação de Indicadores ligado ao projeto \href{http://indicadoresdebelomonte.com.br}{``Indicadores de Belo Monte''}.}{\textit{Product Owner} on the open data platform \href{http://indicadoresdebelomonte.com.br}{``Indicadores de Belo Monte''}.}\\
-     \href{http://indicadoresdebelomonte.com.br}{http://indicadoresdebelomonte.com.br}\\}
+     \langif{br}{
+         Atuação como \textit{Product Owner} no desenvolvimento de um sistema de Gestão e Divulgação de Indicadores
+         ligado ao projeto \href{http://indicadoresdebelomonte.com.br}{``Indicadores de Belo Monte''}.
+       }{
+         \textit{Product Owner} on the open data platform
+         \href{http://indicadoresdebelomonte.com.br}{``Indicadores de Belo Monte''}.
+       }\\
+     \href{http://indicadoresdebelomonte.com.br}{http://indicadoresdebelomonte.com.br}}
   \entry
     {\langif{br}{Fev/15 - Mai/15}{Feb/15 - May/15}}
     {\langif{br}{Consultor PNUD}{UNDP Consultant}}
-    {\href{http://participacao.mj.gov.br}{\langif{br}{Ministério da Justiça}{Brazilian Ministery of Justicy}}}
+    {\href{http://participacao.mj.gov.br}{\langif{br}{Ministério da Justiça}{Brazilian Ministry of Justice}}}
     {\langif{br}{Consultor pelo Programa das Nações Unidas para o Desenvolvimento}{United Nations Development Programme IT Consultant}\\
-    \langif{br}{Planejamento e desenvolvimento das plataformas de Consulta Pública do Ministério da Justiça. Implementação de metodologias ágeis.}%
-               {Planning and development of Brazilian Justice Ministery Public Feedback Platforms. Implementation of agile methodology.}\\
-    \href{http://pensandoodireito.mj.gov.br/}{http://pensandoodireito.mj.gov.br/} e \href{http://github.com/pensandoodireito}{http://github.com/pensandoodireito}\\}
+     \langif{br}{
+         Planejamento e desenvolvimento das plataformas de Consulta Pública do Ministério da Justiça.
+         Implementação de metodologias ágeis.\\
+         Palavras Chave: Wordpress, PHP, democracia participativa, métodos ágeis
+       }{
+         Planning and development of Brazilian Justice Ministry Public Feedback Platforms.%
+         Implementation of agile methodology.\\
+         Keywords: Wordpress, PHP, participative democracy, Agile
+       }\\
+     \href{http://pensandoodireito.mj.gov.br/}{http://pensandoodireito.mj.gov.br/} \& \href{http://github.com/pensandoodireito}{http://github.com/pensandoodireito}
+    }
 \end{entrylist}
 %
 % NOVA PÁGINA
@@ -211,7 +267,7 @@
   ~
   \section{\langif{br}{Ambiente diário}{Daily Env}}
     Debian GNU/Linux \\%\includegraphics[scale=0.40]{img/5stars.png}
-    Gnome3 \\%\includegraphics[scale=0.40]{img/2stars.png}
+    i3wm \\%Gnome3 \\%\includegraphics[scale=0.40]{img/2stars.png}
     Vim
   ~
 %  \section{Jung Typology Test - INFJ}
@@ -238,9 +294,9 @@
 %    %\includegraphics[scale=0.62]{img/personal.png}
 %    ~
   \section{Hobbies}
-      \href{http://olhares.com/diraol}{\langif{br}{Fotografia}{Photograpy}}
+      \href{http://olhares.com/diraol}{\langif{br}{Fotografia}{Photography}}
       Tae-Kwon-Do
-\end{aside}
+\end{aside}%
 %
 % EXPERIÊNCIA (parte 2)
 %
@@ -249,74 +305,92 @@
 \begin{entrylist}
   \entry
     {\langif{br}{Jul/12 - Fev/15}{Jul/12 - Feb/15}}
-    {\langif{br}{Analista de Mídias Digitais}{Digital Media Analist}}
+    {\langif{br}{Analista de Mídias Digitais}{Digital Media Annalist}}
     {O Estado de S.Paulo S/A}
-    {\langif{br}%
-        {Desenvolvedor na equipe de jornalismo de dados}%
-        {Main developer of the data driven journalism team}
-        ("\href{http://estadaodados.com}{Estadão Dados}")\\
-     \langif{br}{Trabalho com dados: extração, tratamento, união, processamento, análise e visualização.}{Data extraction, scraping, gathering, processing, analysis and visualization.}\\
-     \href{http://estadaodados.com}{http://estadaodados.com}\\}
+    {\langif{br}{
+         Desenvolvedor na equipe de jornalismo de dados.
+       }{
+         Main developer of the data driven journalism team.
+       } ("\href{http://estadaodados.com}{Estadão Dados}")\\
+     \langif{br}{
+         Palavras Chave: extração, tratamento, união, processamento, análise e \nohyphens{visualização} de dados.
+       }{
+         Keywords: Data extraction, scraping, gathering, processing, analysis and \nohyphens{visualization}.
+       }\hfill
+     \href{http://estadaodados.com}{http://estadaodados.com}
+    }
    \entry
     {\langif{br}{Jul/08 - Dez/13}{Jul/08 - Dec/13}}
     {\langif{br}{Administrador de Sistemas voluntário}{Volunteer SysAdmin}}
     {Escritório Piloto - Poli-USP}
-    {\langif{br}%
-        {Implementação e manutenção de rede local com servidor OpenLDAP, \nohyphens{compartilhamento} de arquivos (NFS), servidor web (apache), virtualização (XEN) e DNS local\\
-        Concepção, desenvolvimento e manutenção de website institucional (Drupal).\\}%
-        {Design and Setup of LAN, with OpenLDAP server, File Sharing (NFS), WebServer, Virtualization (XEN) and local DNS Server\\
-     Design, development and management of an institucional website on Drupal.\\}
+    {\langif{br}{
+         Implementação e manutenção de rede local (LAN) e website.\\
+         Palavras Chave:
+       }{
+         Design and Setup of local network (LAN) and website.\\
+         Keywords:
+       }
+     OpenLDAP, NFS, apache, XEN, DNS , Drupal.
     }
    \entry
     {\langif{br}{Ago/10 - Ago/11}{Aug/10 - Aug/11}}
     {\langif{br}{Professor de Matemática}{Math Teacher}}
     {ACEPUSP}
-    {\langif{br}{Vurso preparatório para vestibular para \nohyphens{estudantes} de baixa renda}{Preparatory course to low income students}\\}
+    {\langif{br}{
+         Curso preparatório para vestibular para \nohyphens{estudantes} de baixa renda.\\
+         Palavras Chave: Matemática, Geometria, Trigonometria.
+       }{
+         University Preparatory course for low income students.\\
+         Keywords: Mathematics, Geometry, Trigonometry.
+       }
+     }
    \entry
     {\langif{br}{Ago/10 - Dez/10}{Aug/10 - Dec/10}}
     {\langif{br}{Voluntário}{Volunteer}}
     {Universidade de São Paulo}
     {\langif{br}{Modelagem de base de dados}%para uma nova versão do Sistema de \nohyphens{Avaliação} de Ensino}%
     {Database modeling}\\% for the new version of the Teaching Evaluation System}\\%
-    \href{https://github.com/SuperNovaPOLIUSP}{https://github.com/SuperNovaPOLIUSP}\\}
+    \href{https://github.com/SuperNovaPOLIUSP}{https://github.com/SuperNovaPOLIUSP}}
    \entry
     {\langif{br}{Jan/09 - Ago/10}{Jan/09 - Aug/10}}
     {\langif{br}{Voluntário}{Volunteer}}
     {Escola de Governo}
     {\langif{br}{Desenvolvimento de website institucional (Joomla)}{Design, development and management of institucional website on Joomla}\\
-     \langif{br}{Orientação e mentoria de estudantes do curso de Formação de Governantes}{Orientation and Mentoring of Governor Formation Course Students}\\}
+     \langif{br}{Orientação e mentoria de estudantes do curso de Formação de Governantes}{Orientation and Mentoring of Governor Formation Course Students}}
    \entry
     {\langif{br}{Mar/05 - Jun/06}{Mar/05 - Jun/06}}
     {\langif{br}{Bolsista}{Fellow}}
     {Universidade de São Paulo}
-    {\langif{br}{Desenvolvedor do primeiro Sistema de Avaliação de Ensino da Escola \nohyphens{Politécnica}}{Developer of the first Digital Teaching Evaluation System}}
-\end{entrylist}
+    {\langif{br}{
+        Desenvolvedor do primeiro Sistema de Avaliação de Ensino da Escola \nohyphens{Politécnica}.
+      }{
+        Developer of the first Digital Teaching Evaluation System from Escola \nohyphens{Politécnica} da USP.}}
+\end{entrylist}%
 %
 % PROJETOS
 %
-\sectionlang{br}{Projetos}
-\sectionlang{en}{Projects}
+\sectionlang{br}{Projetos e Comunidades}
+\sectionlang{en}{Projects and Communities}
 %\section{Projects}
-\textbf{\langif{br}{Radar Parlamentar}{The Parliamentary Radar}} - \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
+\textbf{\langif{br}{Radar Parlamentar}{The Parliamentary Radar}} \hfill \href{http://radarparlamentar.polignu.org/}{http://radarparlamentar.polignu.org/}\\
 \langif{br}%
-{O Radar Parlamentar é um aplicativo que determina ``semelhanças'' entre partidos \nohyphens{políticos} baseado na análise matemática dos dados de votações de projetos de lei na casa \nohyphens{legislativa}. Existem ainda algumas análises relativas a questões de gênero no Parlamento.\\
+{Aplicativo que determina ``semelhanças'' entre partidos \nohyphens{políticos} baseado na análise matemática dos dados de votações de projetos de lei na casa \nohyphens{legislativa}. Existem ainda algumas análises relativas a questões de gênero no Parlamento.\\
 Este projeto recebeu 4 premiações desde 2012.}%
-{It's a web application that determinates "similarities" between political parties based on the analysis of voting data of legislative houses. There are also some gender analysis from the Parliament. 
-This project has been received 4 awards since 2012.}\\
-\langif{br}%
-{Tecnologias}{Technologies}: Django/Python, R, SQLite/MySQL/Postgres, nginx, uWSGI, D3.js
+{A web application that calculate ``similarities'' between political parties based on legislative houses voting data analysis. There are also some gender analysis from the Parliament. 
+This project has been awarded 4 times since 2012.}\\
+\langif{br}{Palavras Chave:}{Keywords}: Django/Python, R, Postgres, nginx, ElasticSearch, d3js
 
 \textbf{Transparência Hacker \lang{en}{(\textit{Hacker Transparency})}}\\
 \langif{br}%
 {Membro da comunidade brasileira Transparência Hacker, que atua nas áreas de Governo Aberto, Transparência Pública, Dados Abertos e afins. A comunidade já criou o Ônibus Hacker, participou da criação do \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{Laboratório Hacker do Congresso Nacional}}, influenciou na formulação da Lei de Acesso à Informação e do Marco Civil da Internet, dentre outros.}%
-{Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, participated on the creation of a \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{HackerLab at the Congress}}, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', besides other projects.}
+{Member of Brazilian Hacker Transparency community, that advocates for OpenGov, Public Transparency, OpenData, etc. The community created the HackerBus, drove the creation of a \href{http://blog.openingparliament.org/post/72099651071/a-permanent-hacker-space-in-the-brazilian-congress}{\textbf{Congress official HackerLab}}, influenced the Brazilian Public Information Access act and the ``Marco Civil da Internet'', among other projects.}
 %
 % PUBLICAÇÕES
 %
 \sectionlang{br}{Publicações}
 \sectionlang{en}{Publications}
 {\href{http://polignu.org/artigo/twitter-api-elasticsearch-e-kibana-analisando-rede-social}{\textbf{Twitter API, ElasticSearch e Kibana - Analisando a rede social}}\\
-\emph{\langif{br}{Tutorial sobre como coletar, processar e analisar dados do Twitter}{Tutorial on how to gather, process and analyse twitter traffic}}\\}\\
+\emph{\langif{br}{Tutorial sobre como coletar, processar e analisar dados do Twitter}{Tutorial on how to gather, process and analyze twitter traffic.}}\\}\\
 %{\href{http://diraol.polignu.org}{\textbf{DiRaOLinux}}\\
 %\emph{\langif{br}{Blog para documentar e compartilhar experiências diárias com software livre}{Blog to document and share daily discovers and issues fixes}}\\}\\
 \href{http://polignu.org/administrativo/caderno-polignu-volume-1-software-e-culturas-livres}{\textbf{Caderno do PoliGNU - Vol 1 - Software e Cultura Livres}}\\
@@ -338,15 +412,17 @@ This project has been received 4 awards since 2012.}\\
     Django
     Drupal
     Gimp
-  	Git
+    Git
     Inkscape
     Mediawiki
     MySQL/MariaDB
     NFS
     Nginx
     OpenLDAP
+    OpenFlow
     Postgres
     QuantumGis
+    SDN
     Varnish
     Wordpress
     Xen
@@ -358,41 +434,47 @@ This project has been received 4 awards since 2012.}\\
 \sectionlang{en}{Courses and Certifications}
 \begin{entrylist}
   \entry
+    {02/2017}
+    {Data Science Specialization}
+    {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
+    {\emph{\langif{br}{Estatística Inferencial}{Statistical Inference}}\\
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/C2HZUG2HXQJK}{https://coursera.org/verify/C2HZUG2HXQJK}}}}
+  \entry
     {01/2016}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{Modelos de Regressão}{Regression Models}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/T9LTC73MX62A}{https://coursera.org/verify/T9LTC73MX62A}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/T9LTC73MX62A}{https://coursera.org/verify/T9LTC73MX62A}}}}
   \entry
     {11/2015}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{Pesquisa reprodutível}{Reproducible Research}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/U5X4J6YSDC}{https://coursera.org/verify/U5X4J6YSDC}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/U5X4J6YSDC}{https://coursera.org/verify/U5X4J6YSDC}}}}
   \entry
     {10/2015}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{Análise Exploratória de Dados}{Exploratory Data Analysis}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/BCSV3DF2F4}{https://coursera.org/verify/BCSV3DF2F4}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/BCSV3DF2F4}{https://coursera.org/verify/BCSV3DF2F4}}}}
   \entry
     {07/2015}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{Obtenção e Limpeza de Dados}{Getting and Cleaning Data}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/YFY5YWF3MM}{https://coursera.org/verify/YFY5YWF3MM}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/YFY5YWF3MM}{https://coursera.org/verify/YFY5YWF3MM}}}}
   \entry
     {06/2015}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{Linguagem R}{R Programming}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/M2NP642ZUE}{https://coursera.org/verify/M2NP642ZUE}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/M2NP642ZUE}{https://coursera.org/verify/M2NP642ZUE}}}}
   \entry
     {06/2015}
-    {Data Science Speacialization}
+    {Data Science Specialization}
     {\langif{br}{Universidade Johns Hopkins no Coursera}{Johns Hopkins University on Coursera}}
     {\emph{\langif{br}{As Ferramentas do Cientista de Dados}{Data Scientist’s Toolbox}}\\
-    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/ELJEYB2D8A}{https://coursera.org/verify/ELJEYB2D8A}}}\\}
+    {\langif{br}{Certificado Verificado: }{Verified Certificate: }\scriptsize{\href{https://coursera.org/verify/ELJEYB2D8A}{https://coursera.org/verify/ELJEYB2D8A}}}}
   \entry
     {12/2014}
     {\langif{br}{Objetos Pythonicos}{Pythonic Objects}}
@@ -409,53 +491,56 @@ This project has been received 4 awards since 2012.}\\
 %
 \sectionlang{br}{Eventos}
 \sectionlang{en}{Events}
+{\footnotesize{\langif{br}{Mai/16}{May/16}}} - \href{https://rgaiacs.github.io/2016-05-27-ccsl/}{\textbf{Software Carpentry Workshop}}\\
+\langif{br}{Instrutor de R no workshop realizado na Universidade de São Paulo (USP)}{R instructor on the workshop held at University of São Paulo}.
+
 {\footnotesize{\langif{br}{Dez/15}{Dec/15}}} - \href{http://www.lets.go.gov.br/}{\textbf{Hackatona Let's GO}}\\
 \langif{br}{Mentor na Hackathona promovida pela Secretaria de Estado de Gestão e Planejamento do Governo de Goiás}{Mentor on the Hackathon promoted by Goiás State Government Planning and Management Secretary}.
 
 {\footnotesize{\langif{br}{Out/15}{Oct/15}}} - \href{http://www.hackagenda.com.br/evento/sesi-cultura-digital-2015-hackathon-o-museu-do-seculo-xxi/}{\textbf{SESI Cultura Digital 2015 + Hackathon “O museu do século XXI”}}\\
-\langif{br}{Instrutor do workshop ``mapeamento com \textbf{CartoDB}'' e mentor dos grupos participantes do Hackathon}{Instructor of the ``Mapping with CartoDB'' workshop and mentor of the Hackathon participant groups}.
+\langif{br}{Instrutor do workshop ``mapeamento com \textbf{CartoDB}'' e mentor dos grupos participantes do Hackathon}{``Mapping with CartoDB'' workshop instructor and Hackathon mentor}.
 
 {\footnotesize{\langif{br}{Set/15}{Sep/15}}} - \href{http://rgaiacs.github.io/2015-09-10-usp/}{\textbf{Software Carpentry Workshop}}\\
-\langif{br}{Instrutor de \textbf{git} no workshop realizado na Universidade de São Paulo (USP)}{\textbf{Git} Instructor at the workshop held on University of São Paulo}.
+\langif{br}{Instrutor de git no workshop realizado na Universidade de São Paulo (USP)}{Git instructor on the workshop held at University of São Paulo}.
 
-{\footnotesize{\langif{br}{Ago/15}{Aug/15}}} - \href{https://portaldoaluno.casperlibero.edu.br/agenda-eventos/semana-de-jornalismo-casper-libero-2/}{\textbf{\langif{br}{Seminário de Jornalismo da Faculdade Casper Líbero}{Journalism Seminar on the Casper Líbero University}}}\\
-\langif{br}{Debatedor na mesa Jornalismo de Dados e Políticas Públicas de Comunicação}{Debater on the Discussion about Data Journalism and Public Policies for Communications}.
+{\footnotesize{\langif{br}{Ago/15}{Aug/15}}} - \href{https://portaldoaluno.casperlibero.edu.br/agenda-eventos/semana-de-jornalismo-casper-libero-2/}{\textbf{\langif{br}{Seminário de Jornalismo da Faculdade Casper Líbero}{Journalism Seminar on Casper Líbero University}}}\\
+\langif{br}{Debatedor na mesa Jornalismo de Dados e Políticas Públicas de Comunicação}{Debater a panel about Data Journalism and Public Policies for Communications}.
 
-{\footnotesize{Jul/13}} - \href{http://abraji.org.br/congresso/}{\textbf{\langif{br}{9$^o$ Congresso Internacional de Jornalismo Investigativo}{9$^{th}$ Internation Investigative Journalism Congress}}}\\
-\langif{br}{Instrutor do workshop ``Programação para Jornalistas''}{Instructor of the ``Coding for journalists'' workshop}.
+{\footnotesize{Jul/13}} - \href{http://abraji.org.br/congresso/}{\textbf{\langif{br}{9$^o$ Congresso Internacional de Jornalismo Investigativo}{9$^{th}$ International Investigative Journalism Congress}}}\\
+\langif{br}{Instrutor do workshop ``Programação para Jornalistas''}{``Coding for journalists'' workshop instructor}.
 
 {\footnotesize{Nov/13}} - \href{https://knightcenter.utexas.edu/pt-br/blog/00-14390-inscricoes-abertas-para-primeiro-curso-da-anj-com-o-centro-knight-introducao-ao-jornal}{\textbf{\langif{br}{Curso de Introdução ao Jornalismo de Dados}{Introduction to Data Journalism MOOC}}}\\
-\langif{br}{Instrutor do módulo ``Programação''. Curso organizado pelo Knight Center e pela \nohyphens{Associação} Brasileira de Jornais}{Instructor of the ``Programming'' module. Course organized by Knight Center and the brazilian National Journals Association}
+\langif{br}{Instrutor do módulo ``Programação''. Curso organizado pelo Knight Center e pela \nohyphens{Associação} Brasileira de Jornais}{``How to code'' module instructor. Course organized by Knight Center and the Brazilian National Journals Association}.
 
 {\footnotesize{Nov/13}} - \href{http://2.encontro.dados.gov.br/encontro.html}{\textbf{\langif{br}{II Encontro Nacional de Dados Abertos}{II Brazilian National Conference of OpenData}}}\\
-\langif{br}{\textit{Chairman} da Trilha de Visualização de Dados}{Chairman of the dataviz trail}
+\langif{br}{\textit{Chairman} da Trilha de Visualização de Dados}{Dataviz trail Chairman}.
 
 {\footnotesize{Jul/13}} - \href{http://rodadahacker.com/}{\textbf{II RodAda Hacker}}\\
 \langif{br}%
-{Mentor na segunda edição da ``RodAda Hacker, um workshop de um dia que objetiva dar a mulheres mais autonomia com tecnologias}%
-{Mentor on the second edition of ``RodAda Hacker'', a one day workshop that aims to give woman autonomy with techonologies}
+{Mentor na segunda edição da ``RodAda Hacker, um workshop de um dia que objetiva promover autonomia  tecnológica a mulheres}%
+{Mentor on the second edition of ``RodAda Hacker'', a one day workshop that aims to promote women technological autonomy}.
 
 {\footnotesize{\langif{br}{Mai/13}{May/13}}} - \href{http://www2013.org/}{\textbf{www2013 Conference}}\\
 \langif{br}{Palestrante na mesa ``\textit{eGov and Open Data Camp}'', falando sobre ``\textit{The challenges and opportunities of data journalism}''}%
-{Speaker on the ``eGov and Open Data Camp'' discussion, talking about ``The challenges and opportunities of data journalism''}
+{Speaker on the ``eGov and Open Data Camp'' panel, talking about ``The challenges and opportunities of data journalism''}.
 
 {\footnotesize{Mar/13}} - \href{http://rodadahacker.com/}{\textbf{I RodAda Hacker}}\\
 \langif{br}%
 {Mentor na primeira edição da ``RodAda Hacker, um workshop de um dia que objetiva dar a mulheres mais autonomia com tecnologias}%
-{Mentor on the first edition of ``RodAda Hacker'', a one day workshop that aims to give woman autonomy with techonologies}
+{Mentor on the first edition of ``RodAda Hacker'', a one day workshop that aims to give woman autonomy with technologies}.
 
 {\footnotesize{\langif{br}{Out/12}{Oct/12}}} - \href{http://yapcbrasil.org.br/2012/talk/110}{\textbf{YAPC::Brasil 2012}}\\
 \langif{br}%
 {Palestrante: ``Radar Parlamentar: Desvendando a política legislativa''}%
-{Speaker: ``The Parliamentary Radar: Unraveling the legislative politics''}
+{Speaker: ``The Parliamentary Radar: Unraveling the legislative politics''}.
 
 {\footnotesize{Jul/12}} - \href{http://softwarelivre.org/fisl13}{\textbf{\langif{br}{13$^o$ Fórum Internacional de Software Livre (FISL)}{13$^{th}$ Internation Free Software Forum}}}\\
-\langif{br}{Apresentação do Projeto Radar Parlamentar no Workshop de Software Livre (WSL)}{Presented the Parliamentary Radar project on the Free Software Workshop (WSL)}
+\langif{br}{Apresentação do Projeto Radar Parlamentar no Workshop de Software Livre (WSL)}{Presented the Parliamentary Radar project on the Free Software Workshop (WSL)}.
 
 {\footnotesize{\langif{br}{Mai/10}{May/10}}} - \href{http://artigo19.org/infoedireitoseu/?p=560}{\textbf{\langif{br}{O direito ao Acesso à Informação}{The Right to Information Access}}}\\
 \langif{br}%
 {Palestrante sobre o Direito ao Acesso à Informação num debate na PUC-SP}%
-{Speaker on the ``Right to Information Access'' debate at PUC Univeristy}
+{Speaker on the ``Right to Information Access'' debate at PUC University}.
 %
 %\\
 %
