@@ -4,66 +4,54 @@
 \usepackage{xltxtra}
 \defaultfontfeatures{Ligatures=TeX}
 \usepackage{afterpage}
-\usepackage{hyperref}
 \usepackage{hyphenat}
 \usepackage{color}
 \usepackage{xcolor}
+\usepackage{hyperref}          % clickable URls and cross-references
 \usepackage{fancyhdr}
 \usepackage{multilanguage}
 
 %\setdoclang{br}{brazil}
 \setdoclang{en}{english}
 
-\hypersetup{%
-    colorlinks,
-    linkcolor={red!50!black},
-    citecolor={blue!50!black},
-    urlcolor={blue!80!black},
-    pdfborder={0 0 0},
-}
-
 \pagestyle{fancy}
 \lhead{}
 \chead{}
 \rhead{}
-\rfoot{{%
-    \footnotesize{%
-        \langif{br}{%
-        %lang pt-br
-            Veja a última versão deste documento em:
-            \href{https://github.com/diraol/cv/releases/}{https://github.com/diraol/cv/releases/}%
-        }{%
-        %lang en
-            See the lastest version of this document at:
-            \href{https://github.com/diraol/cv/releases/}{https://github.com/diraol/cv/releases/}%
-        }
-}}}
+\rfoot{{\footnotesize{\langif{br}{%
+}{%
+  \footnotesize{\thinfont\color{lightgray}\textit{Attached: curriculum vitae - also on:}
+  \textit{\hypersetup{allbordercolors=white}\url{http://github.com/diraol/cv/releases}}}
+}}}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
-\hypersetup{%
-    pdftitle={Diego Rabatone Oliveira Cover Letter},
-    pdfauthor={Diego Rabatone Oliveira},
-    pdfsubject={Carta de Apresentação/Cover Letter},
-    pdfkeywords={Diego Rabatone Oliveira, diraol},
-    colorlinks=false,       % no lik border color
-   allbordercolors=white    % white border color for all
-}
 %\addbibresource{bibliography.bib}
 \RequirePackage{xcolor}
-\definecolor{pblue}{HTML}{0395DE}
+
+\hypersetup{%
+  pdftitle={Diego Rabatone Oliveira Cover Letter},
+  pdfauthor={Diego Rabatone Oliveira},
+  pdfsubject={Carta de Apresentação/Cover Letter},
+  pdfkeywords={Diego Rabatone Oliveira, diraol},
+  % colorlinks,
+  linkcolor={red!50!black},
+  citecolor={blue!50!black},
+  urlcolor={blue!80!black},
+  %pdfborder={0 0 0},
+  pdfborderstyle={/S/U/W 1}, % underline links instead of boxes
+  linkbordercolor=red,       % color of internal links
+  citebordercolor=green,     % color of links to bibliography
+  filebordercolor=magenta,   % color of file links
+  urlbordercolor=cerulean,        % color of external links
+  % colorlinks=true,       % no lik border color
+  %allbordercolors=white    % white border color for all
+}
 
 \begin{document}
 \thispagestyle{empty}
 \pagenumbering{gobble}% Remove page numbers (and reset to 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\langif{br}{%
-%% text for lang pt-br
-%
-%}{%
-%% text for lang pt-br
-%
-%}
+%\langif{br}{text for lang pt-br}{text for lang en}
 %\langif{br}{}{}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %header{name}{lastname}{title}{city}{country}{phone}{email}{homepage}
@@ -85,50 +73,137 @@
 
 \vfill
 
-my name is Diego Rabatone Oliveira and I am a passionate free software and open
-knowledge advocate. I was recommended by Raniere Silva (The University of
-Manchester) to apply for this opportunity. I first met Raniere in 2015, when I
-participated on a Software Carpentry (SC) workshop that he organized at UNICAMP
-(Campinas, Brazil). Since then I have collaborated, as instructor, in two SC
-workshops that he organized in São Paulo.
+My name is Diego Rabatone Oliveira and I am a passionate free software and open
+knowledge advocate.
+%
+I was recommended by Raniere Silva (The University of Manchester) to apply for
+this opportunity.
+%
+I first met Raniere in 2015, when I participated on a Software Carpentry (SC)
+\href{https://rgaiacs.github.io/2015-06-04-unicamp/}{workshop} that he
+organised at the Universidade de Campinas (UNICAMP).
+%
+Since then I have collaborated, as instructor, in two SC workshops that he
+organised in São Paulo (\href{https://rgaiacs.github.io/2015-09-10-usp/}{2015}
+and \href{https://rgaiacs.github.io/2016-05-27-ccsl/}{2016}).
+
+%\vfill
+
+My goal to attend the Workshop at UNICAMP as a learner was to have knowledge of
+its structure, by reason of being involved with courses and workshops
+organisation forasmuch as 2007.
+%
+These workshops were the genesis of \href{https://polignu.org}{PoliGNU}, a free
+software studies group which I co-founded, in 2009, when I was a computer
+engineering undergraduate student at the Universidade de São Paulo, Brazil.
+%
+As a PoliGNU member, I contributed by producing web contents, managing the
+group social media networks and organising lots of activities.
 
 \vfill
 
-My goal to participate on that first SC Workshop was to have knowledge of its
-structure, by reason of being involved with courses and workshops organization
-forasmuch as 2007. These workshops were the genesis of PoliGNU, a free software
-studies group which I co-founded, in 2009, when I was an engineering
-undergraduate student. Today I am still a member of PoliGNU, contributing
-remotely with web contents, social media and eventually organizing activities,
-like the Open Data Day that happened on March 04th, 2017.
+The most common activity was to organize workshops related to free
+technologies, such as GIMP, Python, among others, and I have also supported
+about 10 editions of a LaTeX course that we developed, summing up more than 500
+students from 2009 to 2013.
+%
+By that time, I did not know Software Carpentry, but I am sure that its lessons
+would have helped a lot to improve our activities.
+%
+Also, on 2015 I formed a group that have subscribed to be a local group on a
+Software Carpentry Instructor Training.
+%
+Unfortunately, we were not selected, but I am still interested in participating
+on a Software Carpentry Instructor Training on the near future.
+%
+%Later on, I got involved with Wikipedia community and help them with
+%some introductory workshops on my University.
 
-\vfill
+%\vfill
 
-During my undergraduate studies, I have taught free technologies such as GIMP,
-Python, among others, and I have also supported about 10 editions of a LaTeX
-course that we developed, summing up more than 500 students from 2009 to 2013.
-Later, I got involved with Wikipedia community and help them with some
-introductory workshops.
+Beyond PoliGNU solo activities, we also established a strong relationship with
+the USP FLOSS Competence Center (\href{http://ccsl.ime.usp.br/en}{CCSL-USP}),
+being their major partners on the Engineering School (Escola Politécnica).
+%
+I was the PoliGNU member responsible for this partnership and our joint
+activities.
+%
+One outcome of this cooperation is that we built a project called
+\href{http://radarparlamentar.polignu.org}{Parliamentary Radar}, that was four
+times awarded, a project that still exists and now have gathered new
+collaborations.
+%
+A CCSL PhD became a Professor at Universidade de Brasília (UNB), and since four
+years ago his Software Engineering students collaborate with our project guided
+by our mentoring. We have reached more than 50 mentored students since then.
 
-\vfill
+%\vfill
 
-For the past few years I have been working mainly as a developer. Firstly on
-the Brazilian newspaper O Estado De São Paulo, with data driven journalism.
-Then I worked as United Nations for Development Program (UNDP) consultant for
-the Brazilian Justice Ministry, developing free software technologies for
-social participation. At last but not least, I consulted for Open Knowledge
-Foundation, on web data products, working remotely with a fellow from
-Philippines and other team members spread around many European countries. As
-far as I can, I am always pursuing opportunities with common grounds between
+For the past few years, I have been working mainly as a developer.
+%
+Firstly I was a member of the first Brazilian data driven journalism team
+(\href{http://blog.estadaodados.com}{Estadão Dados}), on the Brazilian
+newspaper O Estado De São Paulo. There I was the only technical team member,
+working alongside with three more journalists. The main learnings from that
+period are related to my role on translating the journalists ideas into
+products that were easy for the readers to understand, while being able to
+delivery those data driven products all by myself.
+%
+Then I worked as an United Nations for Development Program (UNDP) consultant
+for the Brazilian Justice Ministry, working on a project to improve social
+participation. There I played an important role on organizing the team of
+consultants by guiding the implementation of agile techniques, which made
+possible for us to deliver the required products.
+%
+I also consulted for Open Knowledge Foundation, on web data products, working
+remotely with a School of Data Fellow from Philippines, among other team
+members spread around many European countries.
+%
+At last but not least, since last year I am a Python and Data Science Mentor at
+\href{https://www.thinkful.com/mentors/}{Thinkful}, which is being an enrichful
+experience on understanding the different learning processes that each person
+have.
+
+%\vfill
+
+From all my technical and educational experiences, as student, instructor and
+courses organiser, I have come across many insights about learning, specially
+when related to technological knowledges. I have a strong believe that the more
+the students learn by practice, the more they will strengthen the knowledge.
+Moreover, it is necessary to make them understand the basic and more general
+concepts, the way of thinking on how to code, apart from the language or
+technology they are working with. That is the main reason why I like so much
+the Problem Based Learning (PBL) methodology, an approach where you start by
+practicing and then you try to figure out the concepts from that practical
+knowledge. There are two other topics that are necessary to keep in mind while
+organizing introductory workshops. The first is to strengthen students
+confidence about writing code, by showing them that there is no problem on
+making mistakes, and any code will be rewritten many times \- or to be
+improved, or to be corrected. The second is that the code the students will
+produce need to be useful for them, not only some piece of code that will be
+thrown away after the workshop.
+
+%\vfill
+
+In my opinion, the current teaching techniques are still too much attached to
+the tradicional lecture based methods, even on technological courses. Since
+this is the usual background, for both instructors and students, a special work
+need to be done with the instructors, teaching them how to use more modern
+approaches, such as PBL. For this to be possible, there is the necessity of a
+prior hard work in order to produce guidelines and a solid course structure for
+that kind of approach. I am sure I can contribute a lot with that goal, once I
+am highly experienced on short period programming events, such as Hackathons,
+in addition to my strong technological background.
+
+%\vfill
+
+All in all, I am always pursuing opportunities that have common ground between
 Open Data, Free Software, Open Knowledge and that have a positive social
-impact, specially when this solutions are ``people driven''.
-
-\vfill
-
-All in all, I am sure I can contribute with both Software and Data Carpentry
-organizations towards its missions, and this opportunity eagers me to face the
-challenge to build a Brazilian community around Data Skills, Open Science and
-Open Knowledge.
+impact, specially when they are people driven. Thus, it will be satisfying to
+contribute with both Software and Data Carpentry organisations towards its
+missions, and this opportunity eagers me to face the challenge to build a
+Global South community around Programming and Data Skills that would help to
+improve both Reproducibility and Replicability on academia.
 
 \vfill
 
@@ -141,7 +216,5 @@ Thank you for taking the time to consider my resume.
 \hfill \textbf{Diego Rabatone Oliveira}
 
 \vfill
-
-\footnotesize{\thinfont\color{lightgray}\textit{Attached: curriculum vitae - also on:} \textit{\url{http://github.com/diraol/cv/releases}}}
 
 \end{document}
