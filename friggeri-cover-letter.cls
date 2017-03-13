@@ -24,7 +24,7 @@
 \definecolor{darkgray}{HTML}{333333}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{777777}
-
+\definecolor{cerulean}{rgb}{0.0, 0.48, 0.65}
 \definecolor{green}{HTML}{C2E15F}
 \definecolor{orange}{HTML}{FDA333}
 \definecolor{purple}{HTML}{D3A4F9}
@@ -137,8 +137,8 @@ BoldItalicFont=texgyreheros-bolditalic.otf
  	{\thinfont\color{lightgray}
 		#4 - #5 \\
 	  	\phone{#6}~|~
-	  	\email{\href{mailto:#7}{#7}}~|~
-	  	\homepage{\url{#8}}
+        \email{\hypersetup{allbordercolors=white}\href{mailto:#7}{#7}}~|~
+	  	\homepage{\hypersetup{allbordercolors=white}\url{#8}}
 	  	\vspace{1.5cm}
   	}
 	\end{center}
@@ -356,4 +356,4 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %%%%%%%%%%%%%%%%
 
 \RequirePackage[left=2cm,top=2cm,right=2cm,bottom=2.5cm,nohead,nofoot]{geometry}
-\RequirePackage{hyperref}
+\RequirePackage[hidelinks]{hyperref}
