@@ -1,5 +1,5 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% 
+%
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \ProvidesClass{friggeri-cv}[2012/04/30 CV class]
@@ -9,6 +9,18 @@
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
+
+% Add support for A4 paper
+\newif\ifafourpaper
+
+\afourpaperfalse
+
+\DeclareOption{a4paper}
+   {\setlength\paperheight {297mm}%
+    \setlength\paperwidth  {210mm}%
+    \afourpapertrue%
+   }
+
 \ProcessOptions\relax
 \LoadClass{article}
 
@@ -31,6 +43,10 @@
 \definecolor{red}{HTML}{FB4485}
 \definecolor{blue}{HTML}{6CE0F1}
 \definecolor{pblue}{HTML}{0395DE}
+\definecolor{fblue}{HTML}{3D539E}
+\definecolor{tblue}{HTML}{55ACEE}
+\definecolor{lblue}{HTML}{0077B5}
+\definecolor{vkblue}{HTML}{A6B8D4}
 
 \ifdefined\@cv@print
   \colorlet{green}{gray}
@@ -51,44 +67,17 @@
 % Fonts %
 %%%%%%%%%
 
-% \RequirePackage[quiet]{fontspec}
-% \RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
-% 
-% \newfontfamily\bodyfont[]{Helvetica Neue}
-% \newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-% \newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
-% 
-% \defaultfontfeatures{Mapping=tex-text}
-% \setmainfont[Mapping=tex-text, Color=textcolor]{Helvetica Neue Light}
-% 
-% \setmathfont{XITS Math}
-
-%%% modified by Karol Kozioł for ShareLaTex use
 \RequirePackage[quiet]{fontspec}
-\RequirePackage{unicode-math}
-%\RequirePackage[math-style=TeX,vargreek-shape=unicode]{unicode-math}
+\RequirePackage[math-style=TeX]{unicode-math}
 
-\newfontfamily\bodyfont
-[BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf]
-{texgyreheros-regular.otf}
-\newfontfamily\thinfont[]{Lato-Light.ttf}
-% or for thiner version
-%\newfontfamily\thinfont[]{Lato-Hairline.ttf}
-\newfontfamily\headingfont[]{texgyreheros-bold.otf}
+\newfontfamily\bodyfont[]{Roboto}
+\newfontfamily\thinfont[]{Roboto Thin}
+\newfontfamily\headingfont[]{Roboto Condensed Bold}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont
-[Mapping=tex-text, Color=textcolor,
-BoldFont=texgyreheros-bold.otf,
-ItalicFont=texgyreheros-italic.otf,
-BoldItalicFont=texgyreheros-bolditalic.otf
-]
-{texgyreheros-regular.otf}
+\setmainfont[Mapping=tex-text, Color=textcolor]{Roboto Light}
 
-\setmathfont{texgyreheros-regular.otf}
-%%%
+% \setmathfont{XITS Math}
 
 %%%%%%%%%%
 % Header %
@@ -124,39 +113,30 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 %%%%%%%%%%%%%
 \RequirePackage{parskip}
 
-%\newcounter{colorCounter}
-%\def\@sectioncolor#1#2#3{%
-%  {%
-%    \color{%
-%      \ifcase\value{colorCounter}%
-%        blue\or%
-%        red\or%
-%        orange\or%
-%        green\or%
-%        purple\else%
-%        headercolor\fi%
-%    } #1#2#3%
-%  }%
-%  \stepcounter{colorCounter}%
-%}
-
 \newcounter{colorCounter}
 \def\@sectioncolor#1#2#3{%
   {%
     \color{%
       \ifcase\value{colorCounter}%
-        pblue\or%
-        pblue\or%
-        pblue\or%
-        pblue\or%
-        pblue\else%
-        pblue\fi%
+        blue\or%
+        red\or%
+        orange\or%
+        green\or%
+        purple\or%
+        brown\else%
+        headercolor\fi%
+        % pblue\or%
+        % pblue\or%
+        % pblue\or%
+        % pblue\or%
+        % pblue\else%
+        % pblue\fi%
     } #1#2#3%
   }%
   \stepcounter{colorCounter}%
 }
 
-\renewcommand{\section}[1]{
+\renewcommand{\section}[1]{%
   \par\vspace{\parskip}
   {%
     \LARGE\headingfont\color{headercolor}%
@@ -165,7 +145,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \par\vspace{\parskip}
 }
 
-\renewcommand{\subsection}[2]{
+\renewcommand{\subsection}[2]{%
   \par\vspace{.5\parskip}%
   \Large\headingfont\color{headercolor} #2%
   \par\vspace{.25\parskip}%
@@ -190,7 +170,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
     \textbf{#2}%
     \hfill%
     {\footnotesize\addfontfeature{Color=pblue} #3}\\%
-    {#4\vspace{\parsep}}%
+    {\small{#4}\vspace{\parsep}}%
   }\\
   ~
   \\}
@@ -208,7 +188,7 @@ BoldItalicFont=texgyreheros-bolditalic.otf
   \renewcommand{\section}[1]{
     \par\vspace{\baselineskip}{\Large\headingfont\color{pblue} ##1}
   }
-  \begin{textblock}{3.6}(2.0, 0.55)
+  \begin{textblock}{3.6}(1.5, 4.33)
   \begin{flushright}
   \obeycr
 }{%
@@ -334,3 +314,40 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \RequirePackage[left=6.1cm,top=2cm,right=1.5cm,bottom=2.5cm,nohead,nofoot]{geometry}
 \RequirePackage{hyperref}
+% \hypersetup{
+	% hidelinks,
+	% %colorlinks,
+	% linkcolor=red,
+	% citecolor=red,
+	% filecolor=red,
+	% urlcolor = blue
+% }
+
+% Newcommands for glyph printing
+\RequirePackage{graphicx}
+
+% Add a Google-style pin
+\newcommand*{\pin}{%
+  \textcolor{gray}{\includegraphics[height=1em]{resources/pin}}%
+}
+
+% Add fb logo
+\newcommand*{\flogo}{%
+  \textcolor{fblue}{\includegraphics[height=1em]{resources/f_logo}}%
+}
+
+% Add twitter logo
+\newcommand*{\tlogo}{%
+  \textcolor{tblue}{\includegraphics[height=1em]{resources/twitter_logo}}%
+}
+
+% Add linkedin logo
+\newcommand*{\llogo}{%
+  \textcolor{lblue}{\includegraphics[height=1em]{resources/linkedin_logo}}%
+}
+
+% Add vk logo
+\newcommand*{\vklogo}{%
+  \textcolor{vkblue}{\includegraphics[height=1em]{resources/vk_logo}}%
+}
+
